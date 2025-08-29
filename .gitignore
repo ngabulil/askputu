@@ -18,6 +18,7 @@ pnpm-debug.log*
 # --- Build artifacts ---
 build/
 dist/
+New folder/
 .cache/
 .tmp/
 tmp/

@@ -639,6 +639,10 @@ video {
   position: static;
 }
 
+.\!static {
+  position: static !important;
+}
+
 .fixed {
   position: fixed;
 }
@@ -789,6 +793,10 @@ video {
 
 .clear-none {
   clear: none;
+}
+
+.\!m-0 {
+  margin: 0px !important;
 }
 
 .mx-auto {
@@ -1005,6 +1013,10 @@ video {
 
 .h-screen {
   height: 100vh;
+}
+
+.h-\[50px\] {
+  height: 50px;
 }
 
 .w-24 {
