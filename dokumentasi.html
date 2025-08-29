@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="css/output.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+    <title>Dokumentasi - Askputu</title>
+  </head>
+  <body class="bg-[#121212] flex flex-col relative">
+    <div
+      class="w-full shrink-0 bg-[#121212]/80 backdrop-blur-xl sticky top-0 flex justify-center items-center border-b border-white/20 md-screen:flex-col text-white"
+    >
+      <div
+        class="w-full max-w-[1440px] px-[32px] py-4 flex justify-between items-center lg-screen:px-7 sm-screen:px-4"
+      >
+        <!-- Logo -->
+        <div
+          class="text-center justify-start cursor-pointer"
+          onclick="location.href='/'"
+        >
+          <span
+            class="text-white text-2xl font-medium font-['Plus_Jakarta_Sans'] leading-10 sm-screen:text-xl"
+            >Logo</span
+          ><span
+            class="text-lime-400 text-2xl font-medium font-['Plus_Jakarta_Sans'] leading-10 sm-screen:text-xl"
+            >IPSUM</span
+          >
+        </div>
+        <!-- desktop search -->
+        <label
+          for="search"
+          class="flex justify-start items-center gap-2 border border-[#E0E0E0] rounded-xl px-3 py-2 max-w-[300px] w-[50%] sm-screen:hidden"
+        >
+          <img src="assets/search.svg" />
+          <input
+            type="text"
+            id="search"
+            placeholder="Search"
+            class="bg-transparent outline-none"
+          />
+        </label>
+
+        <!-- mobile -->
+        <div class="sm-screen-min:hidden">
+          <button id="hamburger-btn">
+            <img src="assets/hamburger.svg" class="size-[24px]" />
+          </button>
+          <div
+            id="mobile-nav"
+            class="fixed bg-black/80 h-screen w-screen z-[1001] right-0 top-0 overflow-auto hidden"
+          >
+            <div
+              class="h-full w-[70%] bg-[#121212] p-2 ml-auto flex flex-col"
+            >
+              <div class="py-4">
+                <img src="assets/close.svg" class="size-[24px] ml-auto" />
+              </div>
+              <div class="flex flex-col gap-4">
+                <label
+                  for="search"
+                  class="flex justify-start items-center gap-2 border border-[#E0E0E0] rounded-xl px-3 py-2 w-full"
+                >
+                  <img src="assets/search.svg" />
+                  <input
+                    type="text"
+                    id="search-mobile"
+                    placeholder="Search"
+                    class="bg-transparent outline-none"
+                  />
+                </label>
+                <div id="mobile-sidebar"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="flex size-full px-[32px] py-6 gap-8 text-white sm-screen:py-4 sm-screen:px-4"
+    >
+      <div
+        class="flex w-[22%] shrink-0 sticky top-[calc(74px+24px)] h-[calc(100vh-74px-24px-24px)] overflow-y-auto sm-screen:hidden"
+      >
+        <div class="flex flex-col gap-1 h-full w-full" id="sidebar"></div>
+      </div>
+      <div class="flex size-full gap-8">
+        <div class="w-full flex flex-col gap-4">
+          <div
+            class="text-[#BAFD02] font-medium flex items-center gap-2"
+            id="breadcrumb"
+          ></div>
+          <div id="content-doc" class="flex w-full"></div>
+        </div>
+        <div
+          class="w-[15%] shrink-0 flex flex-col gap-4 sticky top-[calc(74px+24px)] h-[calc(100vh-74px-24px-24px)] sm-screen:hidden"
+        >
+          <div class="font-bold text-[#BAFD02]">On This Page</div>
+          <div class="flex flex-col gap-2 text-[#E0E0E0]" id="on-this-page">
+            <a class="font-bold" href="#pengenalan">Pengenalan</a>
+            <a href="#fitur-ai-agent">Pengenalan 1</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/dokumentasi/index.js" type="module"></script>
+    <script src="js/dokumentasi/pengenalan.js" type="module"></script>
+    <script src="js/dokumentasi/getting-started.js" type="module"></script>
+    <script src="js/dokumentasi/daftar-login.js" type="module"></script>
+  </body>
+</html>

@@ -1,0 +1,112 @@
+.bg-gradient-section {
+  background: linear-gradient(
+    0deg,
+    #121212 23.83%,
+    rgba(30, 28, 38, 0.82) 59.33%,
+    rgba(28, 38, 31, 0.55) 85.33%,
+    rgba(30, 28, 38, 0) 100%
+  );
+}
+
+/* Very important for having a smooth transitions. */
+.swiper .swiper-wrapper {
+  transition-timing-function: linear !important;
+}
+
+.client-swiper .swiper-notification {
+  display: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+.u-wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.c-carousel {
+  overflow-x: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.c-carousel__wrapper.swiper {
+  position: static;
+}
+
+.c-carousel__inner-wrapper.swiper-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.c-carousel img {
+  margin: 0 auto;
+}
+
+.faq-item {
+  background-color: #1a1a1a;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #333;
+  max-height: 56px;
+  transition: all 0.3s ease;
+  padding: 16px;
+  color: white;
+}
+
+.faq-item.open {
+  max-height: 200px;
+}
+
+.faq-question {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.faq-answer {
+  overflow: hidden;
+  padding-top: 8px;
+  font-weight: 300;
+}
+
+.arrow {
+  color: #BAFD02;
+  transition: transform 0.3s ease;
+}
+
+.arrow.rotate {
+  transform: rotate(90deg);
+}
+
+@media screen and (max-width: 768px) {
+  .faq-item {
+    padding: 8px;
+    max-height: 66px;
+  }
+  .faq-question {
+    font-size: 16px;
+  }
+  .faq-answer {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,1503 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/output.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <title>Askputu - AI</title>
+  </head>
+  <body class="bg-black">
+    <div>
+      <div
+        class="w-full bg-neutral-900/25 backdrop-blur-xl flex justify-center items-center fixed z-[1000] top-0 border-b border-white/20 md-screen:flex-col text-white"
+      >
+        <div
+          class="w-full max-w-[1440px] px-24 py-5 inline-flex justify-between items-center lg-screen:px-7 sm-screen:px-4"
+        >
+          <!-- Logo -->
+          <div
+            class="text-center justify-start cursor-pointer"
+            onclick="location.href='/'"
+          >
+            <span
+              class="text-white text-2xl font-medium font-['Plus_Jakarta_Sans'] leading-10 sm-screen:text-xl"
+              >Logo</span
+            ><span
+              class="text-lime-400 text-2xl font-medium font-['Plus_Jakarta_Sans'] leading-10 sm-screen:text-xl"
+              >IPSUM</span
+            >
+          </div>
+
+          <!-- Desktop Menu -->
+          <div
+            class="flex justify-start items-start gap-16 lg-screen:gap-8 md-screen:hidden"
+          >
+            <a class="nav-item text-base font-medium" data-path="/" href="/">
+              Home
+            </a>
+            <a
+              class="nav-item text-base font-medium"
+              data-path="/feature.html"
+              href="/fitur.html"
+            >
+              Feature
+            </a>
+            <a
+              class="nav-item text-base font-medium"
+              data-path="/pricing.html"
+              href="/pricing.html"
+            >
+              Price
+            </a>
+            <a
+              class="nav-item text-base font-medium"
+              data-path="/enterprise.html"
+              href="/enterprise.html"
+            >
+              Enterprise
+            </a>
+            <a
+              class="nav-item text-base font-medium"
+              data-path="/documentation.html"
+              href="/dokumentasi.html"
+            >
+              Documentation
+            </a>
+          </div>
+
+          <!-- Desktop Auth -->
+          <div
+            class="flex justify-start items-start gap-4 lg-screen:gap-2 md-screen:hidden"
+          >
+            <div class="px-8 py-3 flex justify-start items-start gap-1">
+              <div class="text-center text-white text-base font-normal">
+                Login
+              </div>
+            </div>
+            <div
+              class="px-8 py-3 bg-lime-400 rounded-lg flex justify-center items-center gap-2.5"
+            >
+              <div class="text-center text-black text-base font-medium">
+                Sign Up
+              </div>
+            </div>
+          </div>
+
+          <!-- Hamburger + Login Mobile -->
+          <div
+            class="md-screen-min:hidden flex items-center gap-6 sm-screen:gap-4"
+          >
+            <div
+              class="bg-[#BAFD02] text-black px-8 py-2 rounded-full font-bold cursor-pointer sm-screen:text-sm sm-screen:px-6 sm-screen:py-1.5"
+            >
+              Login
+            </div>
+            <div
+              class="size-[30px] cursor-pointer sm-screen:size-[24px]"
+              onclick="toggleMenu()"
+              id="menu-icon"
+            >
+              <img src="/assets/hamburger.svg" id="menu-img" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div
+          class="flex-col gap-2 pb-5 px-7 w-full md-screen-min:hidden hidden sm-screen:px-4 sm-screen:pb-3"
+          id="mobile-menu"
+        >
+          <a
+            class="mobile-nav-item py-2 rounded-full font-bold px-5"
+            data-path="/"
+            href="/"
+          >
+            Home
+          </a>
+          <a
+            class="mobile-nav-item py-2 rounded-full font-bold px-5"
+            data-path="/feature.html"
+            href="/fitur.html"
+          >
+            Feature
+          </a>
+          <a
+            class="mobile-nav-item py-2 rounded-full font-bold px-5"
+            data-path="/pricing.html"
+            href="/pricing.html"
+          >
+            Pricing
+          </a>
+          <a
+            class="mobile-nav-item py-2 rounded-full font-bold px-5"
+            data-path="/enterprise.html"
+            href="/enterprise.html"
+          >
+            Enterprise
+          </a>
+          <a
+            class="mobile-nav-item py-2 rounded-full font-bold px-5"
+            data-path="/documentation.html"
+            href="/dokumentasi.html"
+          >
+            Documentation
+          </a>
+        </div>
+      </div>
+      <div class="flex w-full justify-center relative">
+        <div
+          class="w-full max-w-[1440px] flex md-screen:h-[80vh] sm-screen:h-[90vh] sm-screen:py-0"
+        >
+          <img
+            src="./assets/frame.svg"
+            class="size-full md-screen:object-cover"
+          />
+        </div>
+        <div
+          class="w-full absolute bottom-0 h-[29%] bg-gradient-section flex justify-center z-[2]"
+        >
+          <div
+            class="px-8 py-4 font-medium bg-lime-400 rounded-lg h-fit mt-10 md-screen:mt-4 sm-screen:mt-10 sm-screen:px-6 sm-screen:py-2"
+          >
+            <div class="text-center justify-start text-stone-950 font-medium">
+              Get Started
+            </div>
+          </div>
+        </div>
+        <div class="absolute size-full max-w-[1440px]">
+          <div class="absolute right-[3%] bottom-[28%] md-screen:w-[30%]">
+            <img src="./assets/dot.svg" alt="" />
+          </div>
+        </div>
+        <div
+          class="absolute top-[calc(50%-7%)] -translate-y-1/2 left-1/2 -translate-x-1/2 w-full max-w-[1440px] flex flex-col text-center justify-center items-center gap-8 lg-screen:gap-6"
+        >
+          <div
+            class="w-[50%] text-center justify-start text-neutral-200 text-7xl font-bold lg-screen:text-6xl md-screen:text-5xl md-screen:w-[80%] sm-screen:text-4xl sm-screen:w-[90%]"
+          >
+            Custom AI Chatbots To Meet Your Unique Business Needs
+          </div>
+          <div
+            class="w-[774px] opacity-80 text-center justify-start text-white text-xl font-medium lg-screen:text-lg md-screen:text-base md-screen:w-[80%] sm-screen:text-sm sm-screen:w-[90%]"
+          >
+            Scale your support, engage customers and convert 24/7-all without
+            writing a single line of code with our AI chatbot generator.
+          </div>
+        </div>
+      </div>
+      <div
+        class="w-full flex justify-center items-center py-6 bg-[#121212] md-screen:pt-0 md-screen:-mt-[40px] md-screen:relative md-screen:z-[10]"
+      >
+        <div
+          class="w-full max-w-[1440px] flex justify-center items-center flex-col gap-8 overflow-hidden px-[96px] lg-screen:px-7 sm-screen:px-4"
+        >
+          <div
+            class="text-center justify-center text-neutral-200 text-5xl font-bold lg-screen:text-3xl"
+          >
+            Already chosen by the leaders
+          </div>
+          <div class="size-full flex">
+            <div class="u-wrapper">
+              <div class="c-carousel">
+                <div class="c-carousel__wrapper swiper">
+                  <div class="c-carousel__inner-wrapper swiper-wrapper gap-8">
+                    <div class="c-carousel__item swiper-slide">
+                      <img src="/assets/logoipsum.svg" alt="" />
+                    </div>
+                    <div class="c-carousel__item swiper-slide">
+                      <img src="/assets/logoipsum.svg" alt="" />
+                    </div>
+                    <div class="c-carousel__item swiper-slide">
+                      <img src="/assets/logoipsum.svg" alt="" />
+                    </div>
+                    <div class="c-carousel__item swiper-slide">
+                      <img src="/assets/logoipsum.svg" alt="" />
+                    </div>
+                    <div class="c-carousel__item swiper-slide">
+                      <img src="/assets/logoipsum.svg" alt="" />
+                    </div>
+                    <div class="c-carousel__item swiper-slide">
+                      <img src="/assets/logoipsum.svg" alt="" />
+                    </div>
+                    <div class="c-carousel__item swiper-slide">
+                      <img src="/assets/logoipsum.svg" alt="" />
+                    </div>
+                    <div class="c-carousel__item swiper-slide">
+                      <img src="/assets/logoipsum.svg" alt="" />
+                    </div>
+                    <div class="c-carousel__item swiper-slide">
+                      <img src="/assets/logoipsum.svg" alt="" />
+                    </div>
+                    <div class="c-carousel__item swiper-slide">
+                      <img src="/assets/logoipsum.svg" alt="" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="w-full flex justify-center bg-black">
+        <div
+          class="w-full max-w-[1440px] flex p-[96px] gap-8 overflow-hidden lg-screen:p-7 sm-screen:p-4 sm-screen:flex-col"
+        >
+          <div
+            class="w-[32%] shrink-0 flex flex-col gap-6 relative sm-screen:w-full"
+          >
+            <div
+              class="text-white text-5xl font-bold lg-screen:text-3xl sm-screen:text-center sm-screen:relative sm-screen:z-[2]"
+            >
+              Improve customer service with your best AI agent
+            </div>
+            <div
+              class="text-white text-base font-normal lg-screen:text-sm sm-screen:text-center"
+            >
+              Need Customer Service that is always ready 24/7, understands the
+              intricacies of the company, and can connect to various systems?
+              AskPutu is the solution.
+            </div>
+            <div
+              class="absolute bottom-0 translate-y-[25%] left-0 translate-x-[-45%]"
+            >
+              <img
+                class="w-[1280px] max-w-none"
+                src="./assets/radiant-green.svg"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="w-full flex relative z-[2]">
+            <div
+              class="grid grid-cols-2 size-full gap-8 lg-screen:gap-5 sm-screen:grid-cols-1 sm-screen:gap-4"
+            >
+              <div
+                class="size-full px-3 py-9 bg-zinc-950 rounded-[10px] outline outline-1 outline-offset-[-1px] outline-lime-400 inline-flex flex-col justify-start items-start gap-2.5 hover:bg-lime-400 [&_*]:hover:!text-black lg-screen:py-6"
+              >
+                <div
+                  class="p-2.5 flex flex-col justify-start items-start gap-2.5"
+                >
+                  <div
+                    class="self-stretch flex flex-col justify-start items-start gap-4"
+                  >
+                    <img
+                      class="size-[60px] rounded-full bg-lime-400 p-2 lg-screen:size-[50px]"
+                      src="./assets/cs.svg"
+                    />
+                    <div
+                      class="self-stretch flex flex-col justify-start items-start gap-4"
+                    >
+                      <div
+                        class="text-neutral-200 text-2xl font-bold lg-screen:text-xl"
+                      >
+                        Lorem Ipsum
+                      </div>
+                      <div
+                        class="text-neutral-200 text-lg font-normal lg-screen:text-base"
+                      >
+                        Lorem Ipsum is simply dummy text of the printing and
+                        typesetting industry asdasd asdasd asdasd  
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="size-full px-3 py-9 bg-zinc-950 rounded-[10px] outline outline-1 outline-offset-[-1px] outline-lime-400 inline-flex flex-col justify-start items-start gap-2.5 hover:bg-lime-400 [&_*]:hover:!text-black lg-screen:py-6"
+              >
+                <div
+                  class="p-2.5 flex flex-col justify-start items-start gap-2.5"
+                >
+                  <div
+                    class="self-stretch flex flex-col justify-start items-start gap-4"
+                  >
+                    <img
+                      class="size-[60px] rounded-full bg-lime-400 p-2 lg-screen:size-[50px]"
+                      src="./assets/cs.svg"
+                    />
+                    <div
+                      class="self-stretch flex flex-col justify-start items-start gap-4"
+                    >
+                      <div
+                        class="text-neutral-200 text-2xl font-bold lg-screen:text-xl"
+                      >
+                        Lorem Ipsum
+                      </div>
+                      <div
+                        class="text-neutral-200 text-lg font-normal lg-screen:text-base"
+                      >
+                        Lorem Ipsum is simply dummy text of the printing and
+                        typesetting industry asdasd asdasd asdasd  
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="size-full px-3 py-9 bg-zinc-950 rounded-[10px] outline outline-1 outline-offset-[-1px] outline-lime-400 inline-flex flex-col justify-start items-start gap-2.5 hover:bg-lime-400 [&_*]:hover:!text-black lg-screen:py-6"
+              >
+                <div
+                  class="p-2.5 flex flex-col justify-start items-start gap-2.5"
+                >
+                  <div
+                    class="self-stretch flex flex-col justify-start items-start gap-4"
+                  >
+                    <img
+                      class="size-[60px] rounded-full bg-lime-400 p-2 lg-screen:size-[50px]"
+                      src="./assets/cs.svg"
+                    />
+                    <div
+                      class="self-stretch flex flex-col justify-start items-start gap-4"
+                    >
+                      <div
+                        class="text-neutral-200 text-2xl font-bold lg-screen:text-xl"
+                      >
+                        Lorem Ipsum
+                      </div>
+                      <div
+                        class="text-neutral-200 text-lg font-normal lg-screen:text-base"
+                      >
+                        Lorem Ipsum is simply dummy text of the printing and
+                        typesetting industry asdasd asdasd asdasd  
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="size-full px-3 py-9 bg-zinc-950 rounded-[10px] outline outline-1 outline-offset-[-1px] outline-lime-400 inline-flex flex-col justify-start items-start gap-2.5 hover:bg-lime-400 [&_*]:hover:!text-black lg-screen:py-6"
+              >
+                <div
+                  class="p-2.5 flex flex-col justify-start items-start gap-2.5"
+                >
+                  <div
+                    class="self-stretch flex flex-col justify-start items-start gap-4"
+                  >
+                    <img
+                      class="size-[60px] rounded-full bg-lime-400 p-2 lg-screen:size-[50px]"
+                      src="./assets/cs.svg"
+                    />
+                    <div
+                      class="self-stretch flex flex-col justify-start items-start gap-4"
+                    >
+                      <div
+                        class="text-neutral-200 text-2xl font-bold lg-screen:text-xl"
+                      >
+                        Lorem Ipsum
+                      </div>
+                      <div
+                        class="text-neutral-200 text-lg font-normal lg-screen:text-base"
+                      >
+                        Lorem Ipsum is simply dummy text of the printing and
+                        typesetting industry asdasd asdasd asdasd  
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="w-full flex justify-center">
+        <div
+          class="w-full max-w-[1440px] flex p-[96px] relative gap-10 flex-col before:bg-pattern before:size-full before:absolute before:left-0 before:top-0 before:opacity-20 before:z-[-1] lg-screen:p-7 sm-screen:p-4"
+        >
+          <div class="mx-auto flex flex-col items-center gap-8">
+            <div class="w-[726px] flex flex-col text-center sm-screen:w-full">
+              <span
+                class="text-neutral-200 text-5xl font-bold lg-screen:text-4xl"
+                >Lorem Ipsum is simply dummy</span
+              ><span class="text-lime-400 text-5xl font-bold lg-screen:text-4xl"
+                >typesetting industry</span
+              >
+            </div>
+            <div
+              class="w-[660px] text-center justify-center text-neutral-200 text-xl font-normal lg-screen:text-base sm-screen:w-full"
+            >
+              Lorem Ipsum has been the industry's standard dummy text ever since
+              the 1500s, when an unknown printer took a galley of type and
+              scrambled it to make a type specimen book.
+            </div>
+            <div>
+              <img src="assets/social.png" alt="" />
+            </div>
+          </div>
+          <div class="mx-auto flex justify-center flex-col items-center gap-8">
+            <div class="w-[726px] text-center flex flex-col sm-screen:w-full">
+              <span
+                class="text-neutral-200 text-5xl font-bold lg-screen:text-4xl"
+                >Lorem Ipsum is simply dummy</span
+              ><span class="text-lime-400 text-5xl font-bold lg-screen:text-4xl"
+                >typesetting industry</span
+              >
+            </div>
+            <div
+              class="w-[660px] text-center justify-center text-neutral-200 text-xl font-normal leading-normal lg-screen:text-base sm-screen:w-full"
+            >
+              Lorem Ipsum has been the industry's standard dummy text ever since
+              the 1500s, when an unknown printer took a galley of type and
+              scrambled it to make a type specimen book.
+            </div>
+            <div
+              class="inline-flex justify-center items-center gap-8 sm-screen:flex-col sm-screen:gap-4"
+            >
+              <div
+                class="w-64 h-12 p-3 bg-lime-400 rounded-[20px] inline-flex flex-col justify-start items-start gap-2.5 sm-screen:w-full"
+              >
+                <div class="inline-flex justify-start items-center gap-3">
+                  <img class="w-6 h-6" src="https://placehold.co/24x24" />
+                  <div
+                    class="text-center justify-center text-black text-base font-bold font-['Plus_Jakarta_Sans'] leading-tight"
+                  >
+                    Konsultasi Dengan Kami
+                  </div>
+                </div>
+              </div>
+              <div
+                class="w-48 h-12 p-3 rounded-[20px] outline outline-1 outline-offset-[-1px] outline-lime-400 inline-flex flex-col justify-center items-center gap-2.5 sm-screen:w-full"
+              >
+                <div class="inline-flex justify-center items-center gap-3">
+                  <div
+                    class="text-center justify-center text-lime-400 text-base font-bold font-['Plus_Jakarta_Sans'] leading-tight"
+                  >
+                    Daftar Sekarang
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex gap-8 relative w-full sm-screen:flex-col">
+            <div class="w-[57%] shrink-0 sm-screen:w-full">
+              <div
+                class="size-full bg-[linear-gradient(145deg,_#15141d_85%,_#bafd02_100%)] px-9 py-8 rounded-xl shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] inline-flex flex-col justify-start items-start gap-9 md-screen:p-4"
+              >
+                <img
+                  class="w-full h-60 md-screen:object-cover"
+                  src="https://placehold.co/628x234"
+                />
+                <div class="flex flex-col justify-start items-start gap-3">
+                  <div
+                    class="w-44 h-9 px-4 py-[5px] bg-lime-400/90 rounded-2xl outline outline-1 outline-offset-[-1px] outline-lime-400 inline-flex justify-center items-center gap-2.5"
+                  >
+                    <div
+                      class="justify-start text-neutral-900 text-sm font-semibold"
+                    >
+                      Omnichannel + CRM
+                    </div>
+                  </div>
+                  <div
+                    class="self-stretch justify-start text-neutral-200 text-xl font-bold"
+                  >
+                    Chatting Dashboard Lengkap
+                  </div>
+                  <div
+                    class="self-stretch justify-start text-neutral-200 text-base font-light"
+                  >
+                    Pantau semua percakapan, jawaban AI, dan semua chat dari
+                    pelanggan anda dalam 1 dashboard chatting lengkap.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="w-full">
+              <div
+                class="size-full bg-[linear-gradient(145deg,_#15141d_85%,_#bafd02_100%)] px-9 py-8 rounded-xl shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] inline-flex flex-col justify-start items-start gap-9 md-screen:p-4"
+              >
+                <img
+                  class="w-80 h-60 md-screen:object-cover"
+                  src="https://placehold.co/317x234"
+                />
+                <div class="flex flex-col justify-start items-start gap-3">
+                  <div
+                    class="w-44 h-9 px-4 py-[5px] bg-lime-400/90 rounded-2xl outline outline-1 outline-offset-[-1px] outline-lime-400 inline-flex justify-center items-center gap-2.5"
+                  >
+                    <div
+                      class="justify-start text-neutral-900 text-sm font-semibold"
+                    >
+                      Creative
+                    </div>
+                  </div>
+                  <div
+                    class="self-stretch justify-start text-neutral-200 text-xl font-bold"
+                  >
+                    Ticketing dan Order Management
+                  </div>
+                  <div
+                    class="self-stretch justify-start text-neutral-200 text-base font-light"
+                  >
+                    Kelola pesanan, booking atau sales pipeline anda dengan
+                    mudah.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="grid grid-cols-3 gap-4 relative w-full sm-screen:grid-cols-1"
+          >
+            <div
+              class="size-full px-9 py-8 bg-[linear-gradient(160deg,_#15141D_83%,_#BAFD02_99.63%)] rounded-xl shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] inline-flex flex-col justify-start items-start gap-9 md-screen:p-4"
+            >
+              <img
+                class="w-full h-60 md-screen:object-cover"
+                src="https://placehold.co/317x234"
+              />
+              <div class="w-full flex flex-col justify-start items-start gap-3">
+                <div
+                  class="w-24 h-9 px-4 py-[5px] bg-lime-400/90 rounded-2xl outline outline-1 outline-offset-[-1px] outline-lime-400 inline-flex justify-center items-center gap-2.5"
+                >
+                  <div
+                    class="justify-start text-neutral-900 text-sm font-semibold"
+                  >
+                    Campaign
+                  </div>
+                </div>
+                <div
+                  class="self-stretch justify-start text-neutral-200 text-xl font-bold"
+                >
+                  Broadcast dan AI Followups
+                </div>
+                <div
+                  class="w-full justify-start text-neutral-200 text-base font-light"
+                >
+                  Jangan takut lagi broadcast ke 100k pelanggan. AI siap
+                  menjawab semua pertanyaan campaign anda dan Followups leads
+                  yang hilang.
+                </div>
+              </div>
+            </div>
+            <div
+              class="size-full px-9 py-8 bg-[linear-gradient(160deg,_#15141D_83%,_#BAFD02_99.63%)] rounded-xl shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] inline-flex flex-col justify-start items-start gap-9 md-screen:p-4"
+            >
+              <img
+                class="w-full h-60 md-screen:object-cover"
+                src="https://placehold.co/317x234"
+              />
+              <div class="w-full flex flex-col justify-start items-start gap-3">
+                <div
+                  class="w-24 h-9 px-4 py-[5px] bg-lime-400/90 rounded-2xl outline outline-1 outline-offset-[-1px] outline-lime-400 inline-flex justify-center items-center gap-2.5"
+                >
+                  <div
+                    class="justify-start text-neutral-900 text-sm font-semibold"
+                  >
+                    Campaign
+                  </div>
+                </div>
+                <div
+                  class="self-stretch justify-start text-neutral-200 text-xl font-bold"
+                >
+                  Broadcast dan AI Followups
+                </div>
+                <div
+                  class="w-full justify-start text-neutral-200 text-base font-light"
+                >
+                  Jangan takut lagi broadcast ke 100k pelanggan. AI siap
+                  menjawab semua pertanyaan campaign anda dan Followups leads
+                  yang hilang.
+                </div>
+              </div>
+            </div>
+            <div
+              class="size-full px-9 py-8 bg-[linear-gradient(160deg,_#15141D_83%,_#BAFD02_99.63%)] rounded-xl shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] inline-flex flex-col justify-start items-start gap-9 md-screen:p-4"
+            >
+              <img
+                class="w-full h-60 md-screen:object-cover"
+                src="https://placehold.co/317x234"
+              />
+              <div class="w-full flex flex-col justify-start items-start gap-3">
+                <div
+                  class="w-24 h-9 px-4 py-[5px] bg-lime-400/90 rounded-2xl outline outline-1 outline-offset-[-1px] outline-lime-400 inline-flex justify-center items-center gap-2.5"
+                >
+                  <div
+                    class="justify-start text-neutral-900 text-sm font-semibold"
+                  >
+                    Campaign
+                  </div>
+                </div>
+                <div
+                  class="self-stretch justify-start text-neutral-200 text-xl font-bold"
+                >
+                  Broadcast dan AI Followups
+                </div>
+                <div
+                  class="w-full justify-start text-neutral-200 text-base font-light"
+                >
+                  Jangan takut lagi broadcast ke 100k pelanggan. AI siap
+                  menjawab semua pertanyaan campaign anda dan Followups leads
+                  yang hilang.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="w-full flex justify-center pb-[96px] lg-screen:pb-7 sm-screen:pb-4"
+      >
+        <div
+          class="flex w-full max-w-[1440px] relative px-[156px] py-8 lg-screen:px-[120px] md-screen:px-[0px] sm-screen:p-4"
+          style="
+            background: linear-gradient(
+                263deg,
+                rgba(0, 0, 0, 0.05) 0%,
+                rgba(186, 253, 2, 0.2) 31.8%,
+                rgba(18, 18, 18, 0) 99.81%
+              ),
+              rgba(0, 0, 0, 0.4);
+          "
+        >
+          <div class="absolute top-0 left-0 w-[106px] lg-screen:w-[96px]">
+            <img src="./assets/dot-vertical.svg" alt="" />
+          </div>
+          <div
+            class="size-full flex relative z-[2] sm-screen:flex-col sm-screen:gap-4"
+          >
+            <img
+              class="w-96 h-96 shrink-0 sm-screen:size-full sm-screen:h-auto"
+              src="https://placehold.co/410x450"
+            />
+            <div
+              class="size-full bg-transparent text-white flex justify-center items-center"
+            >
+              <div class="w-[70%] flex flex-col gap-6 sm-screen:w-full">
+                <p
+                  class="text-lime-400 tracking-widest text-base font-semibold"
+                >
+                  SECURITY
+                </p>
+                <h2 class="text-4xl font-bold leading-tight lg-screen:text-3xl">
+                  Built for scale and enterprise<br class="hidden md:block" />
+                  level security
+                </h2>
+                <p class="text-gray-300 text-lg lg-screen:text-base">
+                  SOC-2 Type II certification, penetration tested, and regular
+                  vulnerability scans. Hosted behind a VPC. Data encryption at
+                  rest and transit.
+                </p>
+                <div
+                  class="w-44 h-12 relative border-2 border-lime-400 rounded-xl justify-center flex items-center"
+                >
+                  <div class="bg-neutral-900 rounded-xl">Learn More</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="w-full flex justify-center">
+        <div
+          class="w-full max-w-[1440px] flex p-[96px] relative gap-10 flex-col before:bg-pattern before:size-full before:absolute before:left-0 before:top-0 before:opacity-20 before:z-[-1] lg-screen:p-7 sm-screen:p-4"
+        >
+          <div
+            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full"
+          >
+            <img class="w-full" src="./assets/ellipse-green.svg" alt="" />
+          </div>
+          <div
+            class="w-full bg-transparent text-white text-center relative flex flex-col gap-8"
+          >
+            <!-- Heading -->
+            <div class="flex flex-col gap-8">
+              <h2 class="text-5xl font-bold lg-screen:text-4xl">
+                Monitor. <span class="text-lime-400">Measure.</span> Improve.
+              </h2>
+              <p
+                class="text-gray-300 text-xl max-w-2xl mx-auto lg-screen:text-lg"
+              >
+                Keep tabs on conversations, audience trends, and key metrics
+                effortlessly. Know what’s working, adjust what’s not—without the
+                guesswork.
+              </p>
+            </div>
+
+            <!-- Cards -->
+            <div
+              class="grid grid-cols-3 gap-16 lg-screen:gap-8 sm-screen:grid-cols-1"
+            >
+              <!-- Card 1 -->
+              <div
+                class="bg-[#121212]/80 rounded-lg px-8 py-4 space-y-4 border border-black md-screen:px-4"
+              >
+                <h3 class="text-2xl font-bold">Sentiment Analysis</h3>
+                <p class="text-gray-400 max-w-[240px] mx-auto">
+                  Decode customer emotions in real time.
+                </p>
+                <img
+                  src="https://placehold.co/280x280?text=Chart+Laptop"
+                  alt="Sentiment Analysis"
+                  class="size-[280px] mx-auto"
+                />
+              </div>
+
+              <!-- Card 2 -->
+              <div
+                class="bg-[#121212]/80 rounded-lg px-8 py-4 space-y-4 border border-black md-screen:px-4"
+              >
+                <h3 class="text-2xl font-bold">Top Channel</h3>
+                <p class="text-gray-400 max-w-[240px] mx-auto">
+                  Find where your audience engages the most.
+                </p>
+                <img
+                  src="https://placehold.co/280x280?text=Channel+Graphic"
+                  alt="Top Channel"
+                  class="size-[280px] mx-auto"
+                />
+              </div>
+
+              <!-- Card 3 -->
+              <div
+                class="bg-[#121212]/80 rounded-lg px-8 py-4 space-y-4 border border-black md-screen:px-4"
+              >
+                <h3 class="text-2xl font-bold">AI-Tagged Topics</h3>
+                <p class="text-gray-400 max-w-[240px] mx-auto">
+                  Spot key trends and hot topics instantly.
+                </p>
+                <img
+                  src="https://placehold.co/280x280?text=Flame+Phone"
+                  alt="AI-Tagged Topics"
+                  class="size-[280px] mx-auto"
+                />
+              </div>
+            </div>
+
+            <!-- Button -->
+            <div>
+              <button
+                class="mt-4 px-8 py-5 text-xl bg-lime-400 text-black font-semibold rounded-md hover:bg-lime-300 transition lg-screen:text-lg"
+              >
+                Build AI Chatbot
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="w-full flex justify-center bg-black/80">
+        <div
+          class="w-full max-w-[1440px] flex flex-col gap-12 py-[96px] lg-screen:py-7 sm-screen:py-4 sm-screen:gap-4"
+        >
+          <!-- Heading -->
+          <div
+            class="text-center space-y-4 px-[96px] lg-screen:px-7 sm-screen:px-4"
+          >
+            <h2 class="text-[56px] font-bold text-white lg-screen:text-4xl">
+              AI-Powered <span class="text-lime-400">Solutions</span> for Every
+              Industry
+            </h2>
+            <p
+              class="text-gray-300 text-xl max-w-5xl mx-auto lg-screen:text-lg"
+            >
+              Enhance customer interactions, streamline operations, and drive
+              engagement across industries. Tailor your AI chatbot to meet the
+              unique demands of your industry.
+            </p>
+          </div>
+
+          <!-- Content Section -->
+          <div
+            class="relative before:absolute before:top-1/2 before:left-0 before:-translate-y-1/2 before:w-full before:h-[80%] before:bg-[#121212] before:md-screen:h-full"
+          >
+            <div
+              class="flex items-center gap-4 px-[96px] relative lg-screen:px-7 md-screen:py-4 sm-screen:flex-col sm-screen:px-4"
+            >
+              <!-- Left Side -->
+              <div
+                class="space-y-6 flex flex-col w-[40%] shrink-0 sm-screen:w-full"
+              >
+                <div class="flex flex-col gap-6">
+                  <div
+                    class="size-[60px] flex items-center justify-center rounded-md border border-lime-400 p-2 lg-screen:size-[50px]"
+                  >
+                    <img id="icon-img" src="" alt="" />
+                  </div>
+                  <h3
+                    id="title-text"
+                    class="text-5xl font-semibold text-white lg-screen:text-4xl"
+                  ></h3>
+                </div>
+                <p
+                  id="description-text"
+                  class="text-white text-sm lg-screen:text-xs"
+                ></p>
+
+                <!-- Category Buttons -->
+                <div id="category-buttons" class="flex flex-wrap gap-4"></div>
+              </div>
+
+              <!-- Right Side (Image + Features) -->
+              <div class="flex w-[35%] shrink-0 sm-screen:w-full">
+                <img
+                  id="main-img"
+                  src=""
+                  alt="Chatbot UI"
+                  class="rounded-xl shadow-lg w-full"
+                />
+              </div>
+              <div class="w-full">
+                <ul
+                  id="features-list"
+                  class="text-left space-y-3 text-gray-300"
+                ></ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Explore Button -->
+          <div class="text-center flex">
+            <button
+              id="explore-button"
+              class="mt-6 px-8 py-5 text-xl bg-lime-400 text-black mx-auto font-semibold rounded-md hover:bg-lime-300 transition lg-screen:text-lg lg-screen:px-6 lg-screen:py-4 sm-screen:w-[80%] sm-screen:mt-0"
+            >
+              Explore Next Solution
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="w-full flex justify-center bg-[#121212]">
+        <div
+          class="max-w-[1440px] w-full p-[96px] flex flex-col gap-[70px] lg-screen:p-7 sm-screen:p-4 sm-screen:gap-8"
+        >
+          <div class="relative">
+            <div class="absolute top-0 left-0 size-full">
+              <img
+                src="./assets/ornament.png"
+                alt="Ornament"
+                class="w-full sm-screen:size-full sm-screen:object-cover"
+              />
+            </div>
+            <div
+              class="flex flex-col gap-[60px] items-center relative z-[2] lg-screen:gap-[40px]"
+            >
+              <div class="flex flex-col items-center gap-4">
+                <div
+                  class="text-5xl font-bold text-[#E0E0E0] lg-screen:text-4xl sm-screen:text-center"
+                >
+                  Prices and packages
+                </div>
+                <div class="text-[#E0E0E0]">
+                  Choose the perfect plan for your business needs
+                </div>
+              </div>
+              <div
+                class="grid w-full px-4 grid-cols-4 gap-4 lg-screen:px-0 md-screen:grid-cols-2 sm-screen:grid-cols-1"
+              >
+                <div
+                  class="bg-[rgba(18,18,18,0.25)] backdrop-blur-[27px] flex flex-col items-start w-full p-6 rounded-lg border-x border-b border-[#E4E4E7] gap-[40px]"
+                >
+                  <div class="flex flex-col gap-1">
+                    <div class="text-xl font-bold text-[#E0E0E0]">Free</div>
+                    <div class="text-[#E0E0E0] text-sm">
+                      Best for personal use
+                    </div>
+                  </div>
+                  <div class="flex justify-start items-end gap-1">
+                    <div
+                      class="justify-start text-neutral-200 text-3xl font-bold leading-6"
+                    >
+                      $0
+                    </div>
+                    <div class="justify-start text-neutral-200 text-xs">
+                      /month
+                    </div>
+                  </div>
+                  <div class="flex flex-col gap-4 text-[#E0E0E0]">
+                    <div class="font-semibold">What you get:</div>
+                    <div class="flex items-center gap-2 text-sm">
+                      <span class="text-lime-400">✔</span> Customer Support And
+                      FAQs
+                    </div>
+                    <div class="flex items-center gap-2 text-sm">
+                      <span class="text-lime-400">✔</span> Customer Support And
+                      FAQs
+                    </div>
+                    <div class="flex items-center gap-2 text-sm">
+                      <span class="text-lime-400">✔</span> Personalized Product
+                      Recommendations
+                    </div>
+                    <div class="flex items-center gap-2 text-sm">
+                      <span class="text-lime-400">✔</span> Order Processing and
+                      Payment Assistance
+                    </div>
+                    <div class="flex items-center gap-2 text-sm">
+                      <span class="text-lime-400">✔</span> Post-Purchase Support
+                      and Feedback Collection
+                    </div>
+                  </div>
+                  <div
+                    class="w-full text-center px-5 py-3 rounded-[4px] bg-lime-400 text-black font-semibold"
+                  >
+                    Get Started
+                  </div>
+                </div>
+                <div
+                  class="bg-[rgba(18,18,18,0.25)] relative backdrop-blur-[27px] flex flex-col items-start w-full p-6 rounded-lg border-x border-b border-[#E4E4E7] gap-[40px]"
+                >
+                  <div
+                    class="absolute top-2 right-2 px-3 py-[6px] bg-lime-400 rounded-full text-black text-xs font-semibold"
+                  >
+                    Most Popular
+                  </div>
+                  <div class="flex flex-col gap-1">
+                    <div class="text-xl font-bold text-[#E0E0E0]">Free</div>
+                    <div class="text-[#E0E0E0] text-sm">
+                      Best for personal use
+                    </div>
+                  </div>
+                  <div class="flex justify-start items-end gap-1">
+                    <div
+                      class="justify-start text-neutral-200 text-3xl font-bold leading-6"
+                    >
+                      $0
+                    </div>
+                    <div class="justify-start text-neutral-200 text-xs">
+                      /month
+                    </div>
+                  </div>
+                  <div class="flex flex-col gap-4 text-[#E0E0E0]">
+                    <div class="font-semibold">What you get:</div>
+                    <div class="flex items-center gap-2 text-sm">
+                      <span class="text-lime-400">✔</span> Customer Support And
+                      FAQs
+                    </div>
+                    <div class="flex items-center gap-2 text-sm">
+                      <span class="text-lime-400">✔</span> Customer Support And
+                      FAQs
+                    </div>
+                    <div class="flex items-center gap-2 text-sm">
+                      <span class="text-lime-400">✔</span> Personalized Product
+                      Recommendations
+                    </div>
+                    <div class="flex items-center gap-2 text-sm">
+                      <span class="text-lime-400">✔</span> Order Processing and
+                      Payment Assistance
+                    </div>
+                    <div class="flex items-center gap-2 text-sm">
+                      <span class="text-lime-400">✔</span> Post-Purchase Support
+                      and Feedback Collection
+                    </div>
+                  </div>
+                  <div
+                    class="w-full text-center px-5 py-3 rounded-[4px] bg-lime-400 text-black font-semibold"
+                  >
+                    Get Started
+                  </div>
+                </div>
+                <div
+                  class="bg-[rgba(18,18,18,0.25)] backdrop-blur-[27px] flex flex-col items-start w-full p-6 rounded-lg border-x border-b border-[#E4E4E7] gap-[40px]"
+                >
+                  <div class="flex flex-col gap-1">
+                    <div class="text-xl font-bold text-[#E0E0E0]">Free</div>
+                    <div class="text-[#E0E0E0] text-sm">
+                      Best for personal use
+                    </div>
+                  </div>
+                  <div class="flex justify-start items-end gap-1">
+                    <div
+                      class="justify-start text-neutral-200 text-3xl font-bold leading-6"
+                    >
+                      $0
+                    </div>
+                    <div class="justify-start text-neutral-200 text-xs">
+                      /month
+                    </div>
+                  </div>
+                  <div class="flex flex-col gap-4 text-[#E0E0E0]">
+                    <div class="font-semibold">What you get:</div>
+                    <div class="flex items-center gap-2 text-sm">
+                      <span class="text-lime-400">✔</span> Customer Support And
+                      FAQs
+                    </div>
+                    <div class="flex items-center gap-2 text-sm">
+                      <span class="text-lime-400">✔</span> Customer Support And
+                      FAQs
+                    </div>
+                    <div class="flex items-center gap-2 text-sm">
+                      <span class="text-lime-400">✔</span> Personalized Product
+                      Recommendations
+                    </div>
+                    <div class="flex items-center gap-2 text-sm">
+                      <span class="text-lime-400">✔</span> Order Processing and
+                      Payment Assistance
+                    </div>
+                    <div class="flex items-center gap-2 text-sm">
+                      <span class="text-lime-400">✔</span> Post-Purchase Support
+                      and Feedback Collection
+                    </div>
+                  </div>
+                  <div
+                    class="w-full text-center px-5 py-3 rounded-[4px] bg-lime-400 text-black font-semibold"
+                  >
+                    Get Started
+                  </div>
+                </div>
+                <div
+                  class="bg-[rgba(18,18,18,0.25)] backdrop-blur-[27px] flex flex-col items-start w-full p-6 rounded-lg border-x border-b border-[#E4E4E7] gap-[40px]"
+                >
+                  <div class="flex flex-col gap-1">
+                    <div class="text-xl font-bold text-[#E0E0E0]">Free</div>
+                    <div class="text-[#E0E0E0] text-sm">
+                      Best for personal use
+                    </div>
+                  </div>
+                  <div class="flex justify-start items-end gap-1">
+                    <div
+                      class="justify-start text-neutral-200 text-3xl font-bold leading-6"
+                    >
+                      $0
+                    </div>
+                    <div class="justify-start text-neutral-200 text-xs">
+                      /month
+                    </div>
+                  </div>
+                  <div class="flex flex-col gap-4 text-[#E0E0E0]">
+                    <div class="font-semibold">What you get:</div>
+                    <div class="flex items-center gap-2 text-sm">
+                      <span class="text-lime-400">✔</span> Customer Support And
+                      FAQs
+                    </div>
+                    <div class="flex items-center gap-2 text-sm">
+                      <span class="text-lime-400">✔</span> Customer Support And
+                      FAQs
+                    </div>
+                    <div class="flex items-center gap-2 text-sm">
+                      <span class="text-lime-400">✔</span> Personalized Product
+                      Recommendations
+                    </div>
+                    <div class="flex items-center gap-2 text-sm">
+                      <span class="text-lime-400">✔</span> Order Processing and
+                      Payment Assistance
+                    </div>
+                    <div class="flex items-center gap-2 text-sm">
+                      <span class="text-lime-400">✔</span> Post-Purchase Support
+                      and Feedback Collection
+                    </div>
+                  </div>
+                  <div
+                    class="w-full text-center px-5 py-3 rounded-[4px] bg-lime-400 text-black font-semibold"
+                  >
+                    Get Started
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col gap-[60px] lg-screen:gap-[40px]">
+            <div class="flex flex-col items-center gap-6 text-white">
+              <div
+                class="font-bold text-5xl lg-screen:text-4xl sm-screen:text-center"
+              >
+                What our clients say
+              </div>
+              <div class="max-w-[650px] text-center text-[#E0E0E0]">
+                Rmet facilisi arcu odio urna aenean erat. Pellentesque in vitae
+                lobortis orci tincidunt facilisis. Pulvinar lacus ultricies
+                turpis urna sapien.
+              </div>
+            </div>
+            <div
+              class="w-full flex flex-col items-center gap-[40px] overflow-hidden"
+            >
+              <div
+                class="client-swiper overflow-hidden w-full text-white flex flex-col gap-8"
+              >
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                  <!-- Slides -->
+                  <div class="swiper-slide">
+                    <div
+                      class="flex w-full relative px-[18px] pb-[18px] h-full"
+                    >
+                      <div
+                        class="relative z-[2] flex p-6 flex-col gap-6 bg-[#15141D] rounded-[10px] border border-[#282D45] lg-screen:p-4 lg-screen:gap-4"
+                      >
+                        <div
+                          class="flex items-center gap-6 justify-between lg-screen:gap-4"
+                        >
+                          <div class="flex items-center gap-[10px]">
+                            <img
+                              class="size-[40px] rounded-lg"
+                              src="assets/orang.png"
+                              alt=""
+                            />
+                            <div
+                              class="flex flex-col gap-[10px] lg-screen:gap-[6px]"
+                            >
+                              <div
+                                class="font-medium text-white whitespace-nowrap lg-screen:text-sm"
+                              >
+                                Cameron Williamson
+                              </div>
+                              <div
+                                class="text-xs whitespace-nowrap text-[#8F9BB7]"
+                              >
+                                Web Developer
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            class="size-[40px] flex justify-center items-center"
+                          >
+                            <img src="assets/petik.svg" alt="" />
+                          </div>
+                        </div>
+                        <div class="text-[#E0E0E0] lg-screen:text-sm">
+                          Rorem ipsum dolor sit amet consectetur. Ac quam sem mi
+                          nibh volutpat enim pellentesque. Proin iaculis nisl et
+                          neque sed fermentum sollicitudin lectus asdasd aasd
+                          asdasda sdasd dasasd dsadas dasd.
+                        </div>
+                      </div>
+                      <div
+                        class="absolute bottom-0 left-0 w-full h-1/2 flex translate-y-[18px]"
+                      >
+                        <img
+                          class="size-full"
+                          src="./assets/shape-1.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div
+                      class="flex w-full relative px-[18px] pb-[18px] h-full"
+                    >
+                      <div
+                        class="relative z-[2] flex p-6 flex-col gap-6 bg-[#15141D] rounded-[10px] border border-[#282D45] lg-screen:p-4 lg-screen:gap-4"
+                      >
+                        <div
+                          class="flex items-center gap-6 justify-between lg-screen:gap-4"
+                        >
+                          <div class="flex items-center gap-[10px]">
+                            <img
+                              class="size-[40px] rounded-lg"
+                              src="assets/orang.png"
+                              alt=""
+                            />
+                            <div
+                              class="flex flex-col gap-[10px] lg-screen:gap-[6px]"
+                            >
+                              <div
+                                class="font-medium text-white whitespace-nowrap lg-screen:text-sm"
+                              >
+                                Cameron Williamson
+                              </div>
+                              <div
+                                class="text-xs whitespace-nowrap text-[#8F9BB7]"
+                              >
+                                Web Developer
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            class="size-[40px] flex justify-center items-center"
+                          >
+                            <img src="assets/petik.svg" alt="" />
+                          </div>
+                        </div>
+                        <div class="text-[#E0E0E0] lg-screen:text-sm">
+                          Rorem ipsum dolor sit amet consectetur. Ac quam sem mi
+                          nibh volutpat enim pellentesque. Proin iaculis nisl et
+                          neque sed fermentum sollicitudin lectus asdasd aasd
+                          asdasda sdasd dasasd dsadas dasd.
+                        </div>
+                      </div>
+                      <div
+                        class="absolute bottom-0 left-0 w-full h-1/2 flex translate-y-[18px]"
+                      >
+                        <img
+                          class="size-full"
+                          src="./assets/shape-1.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div
+                      class="flex w-full relative px-[18px] pb-[18px] h-full"
+                    >
+                      <div
+                        class="relative z-[2] flex p-6 flex-col gap-6 bg-[#15141D] rounded-[10px] border border-[#282D45] lg-screen:p-4 lg-screen:gap-4"
+                      >
+                        <div
+                          class="flex items-center gap-6 justify-between lg-screen:gap-4"
+                        >
+                          <div class="flex items-center gap-[10px]">
+                            <img
+                              class="size-[40px] rounded-lg"
+                              src="assets/orang.png"
+                              alt=""
+                            />
+                            <div
+                              class="flex flex-col gap-[10px] lg-screen:gap-[6px]"
+                            >
+                              <div
+                                class="font-medium text-white whitespace-nowrap lg-screen:text-sm"
+                              >
+                                Cameron Williamson
+                              </div>
+                              <div
+                                class="text-xs whitespace-nowrap text-[#8F9BB7]"
+                              >
+                                Web Developer
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            class="size-[40px] flex justify-center items-center"
+                          >
+                            <img src="assets/petik.svg" alt="" />
+                          </div>
+                        </div>
+                        <div class="text-[#E0E0E0] lg-screen:text-sm">
+                          Rorem ipsum dolor sit amet consectetur. Ac quam sem mi
+                          nibh volutpat enim pellentesque. Proin iaculis nisl et
+                          neque sed fermentum sollicitudin lectus asdasd aasd
+                          asdasda sdasd dasasd dsadas dasd.
+                        </div>
+                      </div>
+                      <div
+                        class="absolute bottom-0 left-0 w-full h-1/2 flex translate-y-[18px]"
+                      >
+                        <img
+                          class="size-full"
+                          src="./assets/shape-1.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div
+                      class="flex w-full relative px-[18px] pb-[18px] h-full"
+                    >
+                      <div
+                        class="relative z-[2] flex p-6 flex-col gap-6 bg-[#15141D] rounded-[10px] border border-[#282D45] lg-screen:p-4 lg-screen:gap-4"
+                      >
+                        <div
+                          class="flex items-center gap-6 justify-between lg-screen:gap-4"
+                        >
+                          <div class="flex items-center gap-[10px]">
+                            <img
+                              class="size-[40px] rounded-lg"
+                              src="assets/orang.png"
+                              alt=""
+                            />
+                            <div
+                              class="flex flex-col gap-[10px] lg-screen:gap-[6px]"
+                            >
+                              <div
+                                class="font-medium text-white whitespace-nowrap lg-screen:text-sm"
+                              >
+                                Cameron Williamson
+                              </div>
+                              <div
+                                class="text-xs whitespace-nowrap text-[#8F9BB7]"
+                              >
+                                Web Developer
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            class="size-[40px] flex justify-center items-center"
+                          >
+                            <img src="assets/petik.svg" alt="" />
+                          </div>
+                        </div>
+                        <div class="text-[#E0E0E0] lg-screen:text-sm">
+                          Rorem ipsum dolor sit amet consectetur. Ac quam sem mi
+                          nibh volutpat enim pellentesque. Proin iaculis nisl et
+                          neque sed fermentum sollicitudin lectus asdasd aasd
+                          asdasda sdasd dasasd dsadas dasd.
+                        </div>
+                      </div>
+                      <div
+                        class="absolute bottom-0 left-0 w-full h-1/2 flex translate-y-[18px]"
+                      >
+                        <img
+                          class="size-full"
+                          src="./assets/shape-1.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- If we need navigation buttons -->
+                <div class="relative flex justify-center gap-4">
+                  <div
+                    class="swiper-button-prev static size-auto mt-0 border border-[#282D45] rounded-lg p-2 after:hidden"
+                  >
+                    <img
+                      class="rotate-180"
+                      src="./assets/arrow-right.svg"
+                      alt=""
+                    />
+                  </div>
+                  <div
+                    class="swiper-button-next static size-auto mt-0 border border-[#282D45] rounded-lg p-2 after:hidden"
+                  >
+                    <img src="./assets/arrow-right.svg" alt="" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="w-full flex justify-center">
+        <div
+          class="w-full max-w-[1440px] flex justify-center p-[96px] lg-screen:p-7 sm-screen:p-4"
+        >
+          <div
+            class="flex w-full items-center flex-col gap-14 lg-screen:gap-10"
+          >
+            <div class="flex flex-col items-center gap-3">
+              <div class="text-5xl font-bold text-white lg-screen:text-4xl">
+                Got Questions?
+              </div>
+              <div class="text-xl text-white lg-screen:text-lg">
+                Everything you need to know about our chatbot creator.
+              </div>
+            </div>
+            <div
+              id="faq-container"
+              class="w-full max-w-[780px] flex flex-col gap-4"
+            ></div>
+          </div>
+        </div>
+      </div>
+      <div class="w-full flex justify-center bg-[#121212]">
+        <div
+          class="w-full max-w-[1440px] flex justify-center px-[96px] lg-screen:px-7 sm-screen:p-4"
+        >
+          <div
+            class="size-full relative px-[100px] py-[150px] md-screen:p-[50px] sm-screen:p-0 sm-screen:flex"
+          >
+            <div class="absolute size-full left-0 top-0">
+              <img class="size-full" src="./assets/ornament.png" alt="" />
+            </div>
+            <div
+              class="py-12 px-16 rounded-[20px] bg-black/40 backdrop-blur-[27px] flex flex-col gap-4 sm-screen:p-4"
+            >
+              <div
+                class="text-[24px] font-bold text-[#E0E0E0] text-center leading-none"
+              >
+                Join Our AI Community
+              </div>
+              <div class="text-[#E0E0E0] text-center">
+                Subscribe to our AI newsletter to stay updated with the latest
+                news and insights.
+              </div>
+              <div
+                class="border border-[#BAFD02] rounded-lg py-[10px] px-4 flex items-center justify-between gap-3"
+              >
+                <input
+                  class="size-full bg-transparent outline-none text-white"
+                  type="text"
+                  placeholder="Enter your email"
+                />
+                <button
+                  class="bg-[#BAFD02] py-[10px] px-8 rounded-lg font-medium sm-screen:text-sm sm-screen:px-6 sm-screen:py-2"
+                >
+                  Submit
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="w-full flex justify-center">
+        <div
+          class="w-full max-w-[1440px] flex justify-center p-[96px] lg-screen:p-7 sm-screen:p-4"
+        >
+          <div
+            class="w-full grid grid-cols-5 sm-screen:grid-cols-2 sm-screen:gap-12"
+          >
+            <div class="size-full flex flex-col gap-6 sm-screen:col-span-2">
+              <div>
+                <img src="./assets/logoipsum.svg" alt="" />
+              </div>
+              <div class="text-[#E0E0E0] text-sm opacity-65">
+                Lorem ipsum dolor sit amet consectetur. Ac quam sem mi nibh
+                volutpat enim pellentesque. Proin iaculis nisl et neque sed
+                fermentum sollicitudin lectus.
+              </div>
+              <div class="flex gap-2">
+                <div class="size-[24px]">
+                  <img src="./assets/twitter.svg" alt="" />
+                </div>
+                <div class="size-[24px]">
+                  <img src="./assets/twitter.svg" alt="" />
+                </div>
+                <div class="size-[24px]">
+                  <img src="./assets/twitter.svg" alt="" />
+                </div>
+                <div class="size-[24px]">
+                  <img src="./assets/twitter.svg" alt="" />
+                </div>
+              </div>
+            </div>
+            <div class="flex justify-center sm-screen:justify-start">
+              <div class="w-fit flex flex-col gap-5 lg-screen:text-sm">
+                <div class="text-white/65 font-bold">Company</div>
+                <div class="text-[#E0E0E0] cursor-pointer">About Us</div>
+                <div class="text-[#E0E0E0] cursor-pointer">Contact Us</div>
+                <div class="text-[#E0E0E0] cursor-pointer">Careers</div>
+                <div class="text-[#E0E0E0] cursor-pointer">Press</div>
+              </div>
+            </div>
+            <div class="flex justify-center sm-screen:justify-start">
+              <div class="w-fit flex flex-col gap-5 lg-screen:text-sm">
+                <div class="text-white/65 font-bold">Product</div>
+                <div class="text-[#E0E0E0] cursor-pointer">Features</div>
+                <div class="text-[#E0E0E0] cursor-pointer">Contact Us</div>
+                <div class="text-[#E0E0E0] cursor-pointer">Pricing</div>
+                <div class="text-[#E0E0E0] cursor-pointer">News</div>
+              </div>
+            </div>
+            <div class="flex justify-center sm-screen:justify-start">
+              <div class="w-fit flex flex-col gap-5 lg-screen:text-sm">
+                <div class="text-white/65 font-bold">Services</div>
+                <div class="text-[#E0E0E0] cursor-pointer">
+                  Digital Marketing
+                </div>
+                <div class="text-[#E0E0E0] cursor-pointer">Content Writing</div>
+                <div class="text-[#E0E0E0] cursor-pointer">
+                  SEO for Business
+                </div>
+                <div class="text-[#E0E0E0] cursor-pointer">UI Design</div>
+              </div>
+            </div>
+            <div class="flex justify-center sm-screen:justify-start">
+              <div class="w-fit flex flex-col gap-5 lg-screen:text-sm">
+                <div class="text-white/65 font-bold">Legal</div>
+                <div class="text-[#E0E0E0] cursor-pointer">Privacy Policy</div>
+                <div class="text-[#E0E0E0] cursor-pointer">
+                  Terms & Conditions
+                </div>
+                <div class="text-[#E0E0E0] cursor-pointer">Return Policy</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./js/index.js"></script>
+    <script src="./js/global.js"></script>
+  </body>
+</html>

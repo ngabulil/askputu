@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  scroll-behavior: smooth;
+}
+
+.text-\[\#BAFD02\] {
+  color: #bafd02;
+}
+
+.text-\[\#E0E0E0\] {
+  color: #e0e0e0;
+}
+
+.target-scroll {
+  scroll-margin-top: 80px;
+} 

@@ -1,0 +1,37 @@
+# --- OS junk ---
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# --- Editor / IDE ---
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# --- Node / Tailwind tooling ---
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# --- Build artifacts ---
+build/
+dist/
+.cache/
+.tmp/
+tmp/
+
+# --- Tailwind outputs ---
+# Biasanya untuk static hosting kita commit hasil compile CSS-nya,
+# jadi jangan ignore output.css, cukup ignore source map-nya saja.
+css/output.css.map
+
+# Kalau kamu build di CI dan TIDAK mau commit hasil compile:
+# css/output.css
+
+# --- Archives ---
+*.zip
+*.tar
+*.tar.gz
+*.tgz

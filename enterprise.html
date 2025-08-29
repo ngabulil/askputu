@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Enterprise - Askputu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="./css/output.css" />
+    <link rel="stylesheet" href="./css/enterprise.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  </head>
+  <body class="bg-black">
+    <div
+      class="w-full bg-neutral-900/25 backdrop-blur-xl flex justify-center items-center sticky z-[1000] top-0 border-b border-white/20 md-screen:flex-col text-white"
+    >
+      <div
+        class="w-full max-w-[1440px] px-24 py-5 inline-flex justify-between items-center lg-screen:px-7 sm-screen:px-4"
+      >
+        <!-- Logo -->
+        <div
+          class="text-center justify-start cursor-pointer"
+          onclick="location.href='/'"
+        >
+          <span
+            class="text-white text-2xl font-medium font-['Plus_Jakarta_Sans'] leading-10 sm-screen:text-xl"
+            >Logo</span
+          ><span
+            class="text-lime-400 text-2xl font-medium font-['Plus_Jakarta_Sans'] leading-10 sm-screen:text-xl"
+            >IPSUM</span
+          >
+        </div>
+
+        <!-- Desktop Menu -->
+        <div
+          class="flex justify-start items-start gap-16 lg-screen:gap-8 md-screen:hidden"
+        >
+          <a class="nav-item text-base font-medium" data-path="/" href="/">
+            Home
+          </a>
+          <a
+            class="nav-item text-base font-medium"
+            data-path="/fitur.html"
+            href="/fitur.html"
+          >
+            Feature
+          </a>
+          <a
+            class="nav-item text-base font-medium"
+            data-path="/pricing.html"
+            href="/pricing.html"
+          >
+            Price
+          </a>
+          <a
+            class="nav-item text-base font-medium"
+            data-path="/enterprise.html"
+            href="/enterprise.html"
+          >
+            Enterprise
+          </a>
+          <a
+            class="nav-item text-base font-medium"
+            data-path="/documentation.html"
+            href="/dokumentasi.html"
+          >
+            Documentation
+          </a>
+        </div>
+
+        <!-- Desktop Auth -->
+        <div
+          class="flex justify-start items-start gap-4 lg-screen:gap-2 md-screen:hidden"
+        >
+          <div class="px-8 py-3 flex justify-start items-start gap-1">
+            <div class="text-center text-white text-base font-normal">
+              Login
+            </div>
+          </div>
+          <div
+            class="px-8 py-3 bg-lime-400 rounded-lg flex justify-center items-center gap-2.5"
+          >
+            <div class="text-center text-black text-base font-medium">
+              Sign Up
+            </div>
+          </div>
+        </div>
+
+        <!-- Hamburger + Login Mobile -->
+        <div
+          class="md-screen-min:hidden flex items-center gap-6 sm-screen:gap-4"
+        >
+          <div
+            class="bg-[#BAFD02] text-black px-8 py-2 rounded-full font-bold cursor-pointer sm-screen:text-sm sm-screen:px-6 sm-screen:py-1.5"
+          >
+            Login
+          </div>
+          <div
+            class="size-[30px] cursor-pointer sm-screen:size-[24px]"
+            onclick="toggleMenu()"
+            id="menu-icon"
+          >
+            <img src="/assets/hamburger.svg" id="menu-img" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div
+        class="flex-col gap-2 pb-5 px-7 w-full md-screen-min:hidden hidden sm-screen:px-4 sm-screen:pb-3"
+        id="mobile-menu"
+      >
+        <a
+          class="mobile-nav-item py-2 rounded-full font-bold px-5"
+          data-path="/"
+          href="/"
+        >
+          Home
+        </a>
+        <a
+          class="mobile-nav-item py-2 rounded-full font-bold px-5"
+          data-path="/fitur.html"
+          href="/fitur.html"
+        >
+          Feature
+        </a>
+        <a
+          class="mobile-nav-item py-2 rounded-full font-bold px-5"
+          data-path="/pricing.html"
+          href="/pricing.html"
+        >
+          Pricing
+        </a>
+        <a
+          class="mobile-nav-item py-2 rounded-full font-bold px-5"
+          data-path="/enterprise.html"
+          href="/enterprise.html"
+        >
+          Enterprise
+        </a>
+        <a
+          class="mobile-nav-item py-2 rounded-full font-bold px-5"
+          data-path="/documentation.html"
+          href="/dokumentasi.html"
+        >
+          Documentation
+        </a>
+      </div>
+    </div>
+    <div
+      class="flex w-full max-w-[1440px] justify-center px-[96px] bg-[#121212] lg-screen:px-7 sm-screen:p-0"
+    >
+      <div class="size-full relative flex gap-4">
+        <div class="absolute size-full left-0 top-0 flex z-[1]">
+          <img
+            src="./assets/ornament.png"
+            alt=""
+            class="size-full sm-screen:object-fill"
+          />
+        </div>
+        <div
+          class="flex flex-col gap-8 items-center px-[160px] py-[110px] relative z-[2] lg-screen:px-[100px] lg-screen:py-[80px] md-screen:px-[70px] md-screen:py-[60px] sm-screen:p-4"
+        >
+          <div
+            class="text-[#E0E0E0] font-bold text-6xl text-center w-full sm-screen:w-full sm-screen:text-4xl"
+          >
+            Empowering Enterprises with Advanced
+            <span class="text-[#BAFD02]">AI Technologies </span> for a Smarter
+            Future
+          </div>
+          <div
+            class="text-white font-medium text-xl w-[70%] text-center sm-screen:text-lg sm-screen:w-full"
+          >
+            Plunges you into the cutting edge of artificial intelligence, fusing
+            hands-on experimentation with visionary insights to spark the
+            innovations of tomorrow.
+          </div>
+          <div
+            class="flex items-center gap-8 w-[50%] lg-screen:w-[70%] md-screen:w-full sm-screen:flex-col sm-screen:gap-4"
+          >
+            <button
+              class="flex-1 whitespace-nowrap text-black font-bold text-xl bg-[#BAFD02] px-8 py-3 rounded-full sm-screen:text-sm sm-screen:px-4 sm-screen:w-full"
+            >
+              Book A Demo
+            </button>
+            <button
+              class="flex-1 border border-[#BAFD02] font-bold text-xl text-[#BAFD02] px-8 py-3 rounded-full sm-screen:text-sm sm-screen:px-4 sm-screen:w-full"
+            >
+              Get Started
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="w-full flex justify-center items-center pt-6 pb-[96px] bg-[#121212] md-screen:pt-0 md-screen:relative md-screen:z-[10] sm-screen:pb-0 sm-screen:py-8"
+    >
+      <div
+        class="w-full max-w-[1440px] flex justify-center items-center flex-col gap-8 overflow-hidden px-[96px] lg-screen:px-7 sm-screen:px-4"
+      >
+        <div
+          class="text-center justify-center text-neutral-200 text-4xl font-bold lg-screen:text-3xl"
+        >
+          Trusted By Customer-Lead Product Companies
+        </div>
+        <div class="size-full flex">
+          <div class="u-wrapper">
+            <div class="c-carousel">
+              <div class="c-carousel__wrapper swiper">
+                <div class="c-carousel__inner-wrapper swiper-wrapper gap-8">
+                  <div class="c-carousel__item swiper-slide">
+                    <img src="/assets/logoipsum.svg" alt="" />
+                  </div>
+                  <div class="c-carousel__item swiper-slide">
+                    <img src="/assets/logoipsum.svg" alt="" />
+                  </div>
+                  <div class="c-carousel__item swiper-slide">
+                    <img src="/assets/logoipsum.svg" alt="" />
+                  </div>
+                  <div class="c-carousel__item swiper-slide">
+                    <img src="/assets/logoipsum.svg" alt="" />
+                  </div>
+                  <div class="c-carousel__item swiper-slide">
+                    <img src="/assets/logoipsum.svg" alt="" />
+                  </div>
+                  <div class="c-carousel__item swiper-slide">
+                    <img src="/assets/logoipsum.svg" alt="" />
+                  </div>
+                  <div class="c-carousel__item swiper-slide">
+                    <img src="/assets/logoipsum.svg" alt="" />
+                  </div>
+                  <div class="c-carousel__item swiper-slide">
+                    <img src="/assets/logoipsum.svg" alt="" />
+                  </div>
+                  <div class="c-carousel__item swiper-slide">
+                    <img src="/assets/logoipsum.svg" alt="" />
+                  </div>
+                  <div class="c-carousel__item swiper-slide">
+                    <img src="/assets/logoipsum.svg" alt="" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="flex w-full max-w-[1440px] p-[96px] gap-[100px] lg-screen:p-7 sm-screen:p-4"
+    >
+      <div class="flex flex-col justify-between gap-4 flex-1">
+        <div
+          class="text-base font-semibold text-[#BAFD02] !tracking-[4px] sm-screen:text-sm"
+        >
+          PRACTICAL
+        </div>
+        <div class="text-4xl font-bold text-[#E0E0E0] sm-screen:text-3xl">
+          Indoxx offers real-world AI training you can apply immediately
+        </div>
+        <div class="sm-screen-min:hidden sm-screen:block">
+          <img
+            src="/assets/laptop.png"
+            class="size-full md-screen:object-contain"
+          />
+        </div>
+        <div class="text-xl font-medium text-[#E0E0E0] sm-screen:text-lg">
+          Our comprehensive program is designed to equip you with practical AI
+          skills and knowledge that can be directly implemented in your projects
+          and business challenges from day one.
+        </div>
+        <button
+          class="w-fit text-base font-bold rounded-full px-12 py-2 text-[#BAFD02] border border-[#BAFD02]"
+        >
+          Read More
+        </button>
+      </div>
+      <div class="flex-1 sm-screen:hidden">
+        <img
+          src="/assets/laptop.png"
+          class="size-full md-screen:object-contain"
+        />
+      </div>
+    </div>
+    <div
+      class="flex w-full flex-row-reverse bg-[#121212] max-w-[1440px] p-[96px] gap-[100px] lg-screen:p-7 sm-screen:p-4"
+    >
+      <div class="flex flex-col justify-between gap-4 flex-1">
+        <div
+          class="text-base font-semibold text-[#BAFD02] !tracking-[4px] sm-screen:text-sm"
+        >
+          PRACTICAL
+        </div>
+        <div class="text-4xl font-bold text-[#E0E0E0] sm-screen:text-3xl">
+          Indoxx offers real-world AI training you can apply immediately
+        </div>
+        <div class="sm-screen-min:hidden sm-screen:block">
+          <img
+            src="/assets/laptop-2.png"
+            class="size-full md-screen:object-contain"
+          />
+        </div>
+        <div class="text-xl font-medium text-[#E0E0E0] sm-screen:text-lg">
+          Our comprehensive program is designed to equip you with practical AI
+          skills and knowledge that can be directly implemented in your projects
+          and business challenges from day one.
+        </div>
+        <button
+          class="w-fit text-base font-bold rounded-full px-12 py-2 text-[#BAFD02] border border-[#BAFD02]"
+        >
+          Read More
+        </button>
+      </div>
+      <div class="flex-1 sm-screen:hidden">
+        <img
+          src="/assets/laptop-2.png"
+          class="size-full md-screen:object-contain"
+        />
+      </div>
+    </div>
+    <div
+      class="flex w-full max-w-[1440px] p-[96px] gap-[100px] lg-screen:p-7 sm-screen:p-4"
+    >
+      <div class="flex flex-col justify-between gap-4 flex-1">
+        <div
+          class="text-base font-semibold text-[#BAFD02] !tracking-[4px] sm-screen:text-sm"
+        >
+          PRACTICAL
+        </div>
+        <div class="text-4xl font-bold text-[#E0E0E0] sm-screen:text-3xl">
+          Indoxx offers real-world AI training you can apply immediately
+        </div>
+        <div class="sm-screen-min:hidden sm-screen:block">
+          <img
+            src="/assets/laptop.png"
+            class="size-full md-screen:object-contain"
+          />
+        </div>
+        <div class="text-xl font-medium text-[#E0E0E0] sm-screen:text-lg">
+          Our comprehensive program is designed to equip you with practical AI
+          skills and knowledge that can be directly implemented in your projects
+          and business challenges from day one.
+        </div>
+        <button
+          class="w-fit text-base font-bold rounded-full px-12 py-2 text-[#BAFD02] border border-[#BAFD02]"
+        >
+          Read More
+        </button>
+      </div>
+      <div class="flex-1 sm-screen:hidden">
+        <img
+          src="/assets/laptop.png"
+          class="size-full md-screen:object-contain"
+        />
+      </div>
+    </div>
+    <div
+      class="flex w-full flex-row-reverse bg-[#121212] max-w-[1440px] p-[96px] gap-[100px] lg-screen:p-7 sm-screen:p-4"
+    >
+      <div class="flex flex-col justify-between gap-4 flex-1">
+        <div
+          class="text-base font-semibold text-[#BAFD02] !tracking-[4px] sm-screen:text-sm"
+        >
+          PRACTICAL
+        </div>
+        <div class="text-4xl font-bold text-[#E0E0E0] sm-screen:text-3xl">
+          Indoxx offers real-world AI training you can apply immediately
+        </div>
+        <div class="sm-screen-min:hidden sm-screen:block">
+          <img
+            src="/assets/laptop-2.png"
+            class="size-full md-screen:object-contain"
+          />
+        </div>
+        <div class="text-xl font-medium text-[#E0E0E0] sm-screen:text-lg">
+          Our comprehensive program is designed to equip you with practical AI
+          skills and knowledge that can be directly implemented in your projects
+          and business challenges from day one.
+        </div>
+        <button
+          class="w-fit text-base font-bold rounded-full px-12 py-2 text-[#BAFD02] border border-[#BAFD02]"
+        >
+          Read More
+        </button>
+      </div>
+      <div class="flex-1 sm-screen:hidden">
+        <img
+          src="/assets/laptop-2.png"
+          class="size-full md-screen:object-contain"
+        />
+      </div>
+    </div>
+    <div
+      class="flex w-full max-w-[1440px] px-[96px] py-[60px] relative lg-screen:p-7 sm-screen:p-4"
+    >
+      <div class="absolute size-full left-0 top-0 flex z-[0] bg-[#121212]">
+        <img src="/assets/bg-contact.svg" class="size-full object-cover" />
+      </div>
+      <div class="relative z-[1] flex w-full flex-col gap-[50px]">
+        <div
+          class="w-[60%] text-center flex flex-col gap-4 mx-auto sm-screen:w-full"
+        >
+          <div class="text-white font-bold text-5xl sm-screen:text-4xl">
+            Get In <span class="grad-text">Touch</span>
+          </div>
+          <div class="text-xl text-[#E0E0E0] font-medium sm-screen:text-lg">
+            Fill out the form below to request a demo, ask questions, or learn
+            more about our AI enterprise solutions. Our team will get back to
+            you promptly.
+          </div>
+        </div>
+        <div
+          class="flex w-full gap-[40px] p-7 bg-[#121212] rounded-[20px] items-center sm-screen:p-4 sm-screen:flex-col"
+        >
+          <div class="flex-1 h-fit flex flex-col gap-4">
+            <div class="text-[#E0E0E0] font-semibold text-3xl">
+              Ready to Elevate Your Enterprise with AI?
+            </div>
+            <div class="text-[#E0E0E0]">
+              Fill out the form below, and we’ll get back to you promptly with
+              all the information you need.
+            </div>
+            <div class="flex flex-col gap-4 pt-4">
+              <div class="grid grid-cols-2 gap-4 w-full">
+                <input
+                  placeholder="First Name"
+                  class="p-3 rounded-md bg-white/5 border border-white/20 outline-none text-white w-full"
+                />
+                <input
+                  placeholder="Last Name"
+                  class="p-3 rounded-md bg-white/5 border border-white/20 outline-none text-white w-full"
+                />
+              </div>
+              <div class="w-full">
+                <input
+                  placeholder="First Name"
+                  class="p-3 rounded-md bg-white/5 border border-white/20 outline-none text-white w-full"
+                />
+              </div>
+              <div class="w-full">
+                <input
+                  placeholder="First Name"
+                  class="p-3 rounded-md bg-white/5 border border-white/20 outline-none text-white w-full"
+                />
+              </div>
+              <div class="w-full">
+                <input
+                  placeholder="First Name"
+                  class="p-3 rounded-md bg-white/5 border border-white/20 outline-none text-white w-full"
+                />
+              </div>
+            </div>
+            <button class="bg-[#BAFD02] py-3 text-black rounded-md font-medium">
+              Send Message
+            </button>
+          </div>
+          <div class="flex-1 relative h-full">
+            <img
+              src="/assets/astronot.png"
+              class="size-full md-screen:object-fill"
+            />
+            <div
+              class="absolute left-0 bottom-0 p-4 text-[#E0E0E0] text-base opacity-80"
+            >
+              Contact us today to learn how Indoxx Class can provide practical
+              AI training tailored for your business needs. Our team is here to
+              support you every step of the way.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="w-full max-w-[1440px] flex justify-center p-[96px] lg-screen:p-7 sm-screen:p-4"
+    >
+      <div
+        class="w-full grid grid-cols-5 sm-screen:grid-cols-2 sm-screen:gap-12"
+      >
+        <div class="size-full flex flex-col gap-6 sm-screen:col-span-2">
+          <div>
+            <img src="./assets/logoipsum.svg" alt="" />
+          </div>
+          <div class="text-[#E0E0E0] text-sm opacity-65">
+            Lorem ipsum dolor sit amet consectetur. Ac quam sem mi nibh volutpat
+            enim pellentesque. Proin iaculis nisl et neque sed fermentum
+            sollicitudin lectus.
+          </div>
+          <div class="flex gap-2">
+            <div class="size-[24px]">
+              <img src="./assets/twitter.svg" alt="" />
+            </div>
+            <div class="size-[24px]">
+              <img src="./assets/twitter.svg" alt="" />
+            </div>
+            <div class="size-[24px]">
+              <img src="./assets/twitter.svg" alt="" />
+            </div>
+            <div class="size-[24px]">
+              <img src="./assets/twitter.svg" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-center sm-screen:justify-start">
+          <div class="w-fit flex flex-col gap-5 lg-screen:text-sm">
+            <div class="text-white/65 font-bold">Company</div>
+            <div class="text-[#E0E0E0] cursor-pointer">About Us</div>
+            <div class="text-[#E0E0E0] cursor-pointer">Contact Us</div>
+            <div class="text-[#E0E0E0] cursor-pointer">Careers</div>
+            <div class="text-[#E0E0E0] cursor-pointer">Press</div>
+          </div>
+        </div>
+        <div class="flex justify-center sm-screen:justify-start">
+          <div class="w-fit flex flex-col gap-5 lg-screen:text-sm">
+            <div class="text-white/65 font-bold">Product</div>
+            <div class="text-[#E0E0E0] cursor-pointer">Features</div>
+            <div class="text-[#E0E0E0] cursor-pointer">Contact Us</div>
+            <div class="text-[#E0E0E0] cursor-pointer">Pricing</div>
+            <div class="text-[#E0E0E0] cursor-pointer">News</div>
+          </div>
+        </div>
+        <div class="flex justify-center sm-screen:justify-start">
+          <div class="w-fit flex flex-col gap-5 lg-screen:text-sm">
+            <div class="text-white/65 font-bold">Services</div>
+            <div class="text-[#E0E0E0] cursor-pointer">Digital Marketing</div>
+            <div class="text-[#E0E0E0] cursor-pointer">Content Writing</div>
+            <div class="text-[#E0E0E0] cursor-pointer">SEO for Business</div>
+            <div class="text-[#E0E0E0] cursor-pointer">UI Design</div>
+          </div>
+        </div>
+        <div class="flex justify-center sm-screen:justify-start">
+          <div class="w-fit flex flex-col gap-5 lg-screen:text-sm">
+            <div class="text-white/65 font-bold">Legal</div>
+            <div class="text-[#E0E0E0] cursor-pointer">Privacy Policy</div>
+            <div class="text-[#E0E0E0] cursor-pointer">Terms & Conditions</div>
+            <div class="text-[#E0E0E0] cursor-pointer">Return Policy</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./js/global.js"></script>
+    <script src="./js/enterprise.js"></script>
+  </body>
+</html>

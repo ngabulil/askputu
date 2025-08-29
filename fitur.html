@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fitur - Askputu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="./css/output.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-black">
+    <div
+      class="w-full bg-neutral-900/25 backdrop-blur-xl flex justify-center items-center sticky z-[1000] top-0 border-b border-white/20 md-screen:flex-col text-white"
+    >
+      <div
+        class="w-full max-w-[1440px] px-24 py-5 inline-flex justify-between items-center lg-screen:px-7 sm-screen:px-4"
+      >
+        <!-- Logo -->
+        <div
+          class="text-center justify-start cursor-pointer"
+          onclick="location.href='/'"
+        >
+          <span
+            class="text-white text-2xl font-medium font-['Plus_Jakarta_Sans'] leading-10 sm-screen:text-xl"
+            >Logo</span
+          ><span
+            class="text-lime-400 text-2xl font-medium font-['Plus_Jakarta_Sans'] leading-10 sm-screen:text-xl"
+            >IPSUM</span
+          >
+        </div>
+
+        <!-- Desktop Menu -->
+        <div
+          class="flex justify-start items-start gap-16 lg-screen:gap-8 md-screen:hidden"
+        >
+          <a class="nav-item text-base font-medium" data-path="/" href="/">
+            Home
+          </a>
+          <a class="nav-item text-base font-medium" data-path="/fitur.html" href="/fitur.html">
+            Feature
+          </a>
+          <a class="nav-item text-base font-medium" data-path="/pricing.html" href="/pricing.html">
+            Price
+          </a>
+          <a
+            class="nav-item text-base font-medium"
+            data-path="/enterprise.html"
+            href="/enterprise.html"
+          >
+            Enterprise
+          </a>
+          <a
+            class="nav-item text-base font-medium"
+            data-path="/documentation.html"
+            href="/dokumentasi.html"
+          >
+            Documentation
+          </a>
+        </div>
+
+        <!-- Desktop Auth -->
+        <div
+          class="flex justify-start items-start gap-4 lg-screen:gap-2 md-screen:hidden"
+        >
+          <div class="px-8 py-3 flex justify-start items-start gap-1">
+            <div class="text-center text-white text-base font-normal">
+              Login
+            </div>
+          </div>
+          <div
+            class="px-8 py-3 bg-lime-400 rounded-lg flex justify-center items-center gap-2.5"
+          >
+            <div class="text-center text-black text-base font-medium">
+              Sign Up
+            </div>
+          </div>
+        </div>
+
+        <!-- Hamburger + Login Mobile -->
+        <div
+          class="md-screen-min:hidden flex items-center gap-6 sm-screen:gap-4"
+        >
+          <div
+            class="bg-[#BAFD02] text-black px-8 py-2 rounded-full font-bold cursor-pointer sm-screen:text-sm sm-screen:px-6 sm-screen:py-1.5"
+          >
+            Login
+          </div>
+          <div
+            class="size-[30px] cursor-pointer sm-screen:size-[24px]"
+            onclick="toggleMenu()"
+            id="menu-icon"
+          >
+            <img src="/assets/hamburger.svg" id="menu-img" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div
+        class="flex-col gap-2 pb-5 px-7 w-full md-screen-min:hidden hidden sm-screen:px-4 sm-screen:pb-3"
+        id="mobile-menu"
+      >
+        <a
+          class="mobile-nav-item py-2 rounded-full font-bold px-5"
+          data-path="/index.html"
+          href="/"
+        >
+          Home
+        </a>
+        <a
+          class="mobile-nav-item py-2 rounded-full font-bold px-5"
+          data-path="/fitur.html"
+          href="/fitur.html"
+        >
+          Feature
+        </a>
+        <a
+          class="mobile-nav-item py-2 rounded-full font-bold px-5"
+          data-path="/pricing.html"
+          href="/pricing.html"
+        >
+          Pricing
+        </a>
+        <a
+          class="mobile-nav-item py-2 rounded-full font-bold px-5"
+          data-path="/enterprise.html"
+          href="/enterprise.html"
+        >
+          Enterprise
+        </a>
+        <a
+          class="mobile-nav-item py-2 rounded-full font-bold px-5"
+          data-path="/documentation.html"
+          href="/dokumentasi.html"
+        >
+          Documentation
+        </a>
+      </div>
+    </div>
+    <div
+      class="flex w-full max-w-[1440px] justify-center px-[96px] lg-screen:px-7 sm-screen:p-0"
+    >
+      <div class="size-full relative flex gap-4">
+        <div class="absolute size-full left-0 top-0 flex z-[-1]">
+          <img src="./assets/ornament.png" alt="" class="size-full sm-screen:object-fill" />
+        </div>
+        <div
+          class="flex flex-col gap-5 items-center px-[160px] py-[110px] lg-screen:px-[100px] lg-screen:py-[80px] md-screen:px-[70px] md-screen:py-[60px] sm-screen:p-4"
+        >
+          <div class="text-[#E0E0E0] font-bold text-6xl text-center w-[90%] sm-screen:w-full sm-screen:text-4xl">
+            <span class="text-[#BAFD02]">NamaAI</span> memiliki semua fitur yang
+            diperlukan untuk melayani pelanggan.
+          </div>
+          <div class="text-white font-medium text-xl w-[70%] text-center sm-screen:text-lg sm-screen:w-full">
+            Dengan NamaAI, Anda dapat melayani pelanggan Anda dengan cepat dan
+            tepat.
+          </div>
+          <button
+            class="text-black font-bold text-xl bg-[#BAFD02] px-8 py-3 rounded-full sm-screen:text-sm sm-screen:px-4"
+          >
+            AI Humanlike Pertama di Indonesia
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      class="flex w-full max-w-[1440px] justify-center p-[96px] relative lg-screen:p-7 sm-screen:p-4"
+    >
+      <div class="absolute size-full left-0 top-0 flex z-[-1] opacity-20">
+        <img src="./assets/pattern.png" alt="" class="size-full" />
+      </div>
+      <div
+        class="absolute left-0 bottom-0 translate-x-[-40%] translate-y-[50%] flex z-[1] opacity-80"
+      >
+        <img src="./assets/radiant-green.svg" alt="" class="w-[1280px] h-fit" />
+      </div>
+      <div class="flex w-full flex-col gap-[60px] relative z-[2]">
+        <div class="flex gap-[60px] w-full md-screen:gap-[40px] md-screen:flex-col">
+          <div class="flex-1">
+            <img
+              src="/assets/fitur.png"
+              class="size-full object-cover md-screen:object-contain"
+            />
+          </div>
+          <div class="flex-1 flex flex-col gap-4">
+            <div
+              class="text-sm font-bold bg-[#BAFD02] px-8 py-3 w-fit rounded-full"
+            >
+              Actions
+            </div>
+            <div class="text-[#E0E0E0] text-2xl font-bold">
+              Menjalankan Tanggung Jawab dan Mengumpulkan Informasi melalui
+              Interaksi
+            </div>
+            <div class="text-[#E0E0E0] text-base font-medium">
+              Kumpulkan data dan otomatisasikan alur kerja. Jadikan antarmuka
+              obrolan Anda alat yang hebat untuk pengumpulan data dan
+              pelaksanaan tugas kerja secara otomatis.
+            </div>
+            <ul class="flex flex-col gap-2 text-[#E0E0E0] text-base">
+              <li class="flex items-center gap-4">
+                <span class="text-[#BAFD02]">✔</span>
+                <span>Intelligent Task Execution</span>
+              </li>
+              <li class="flex items-center gap-4">
+                <span class="text-[#BAFD02]">✔</span>
+                <span>Intelligent Task Execution</span>
+              </li>
+              <li class="flex items-center gap-4">
+                <span class="text-[#BAFD02]">✔</span>
+                <span>Intelligent Task Execution</span>
+              </li>
+            </ul>
+            <div class="w-full flex items-center gap-8">
+              <button
+                class="font-bold py-3 w-full text-black bg-[#BAFD02] rounded-full"
+              >
+                Konsultasi
+              </button>
+              <button
+                class="font-bold py-3 w-full text-[#BAFD02] border border-[#BAFD02] rounded-full"
+              >
+                Daftar
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex flex-row-reverse gap-[60px] w-full md-screen:gap-[40px] md-screen:flex-col"
+        >
+          <div class="flex-1">
+            <img
+              src="/assets/fitur.png"
+              class="size-full object-cover md-screen:object-contain"
+            />
+          </div>
+          <div class="flex-1 flex flex-col gap-4">
+            <div
+              class="text-sm font-bold bg-[#BAFD02] px-8 py-3 w-fit rounded-full"
+            >
+              Actions
+            </div>
+            <div class="text-[#E0E0E0] text-2xl font-bold">
+              Menjalankan Tanggung Jawab dan Mengumpulkan Informasi melalui
+              Interaksi
+            </div>
+            <div class="text-[#E0E0E0] text-base font-medium">
+              Kumpulkan data dan otomatisasikan alur kerja. Jadikan antarmuka
+              obrolan Anda alat yang hebat untuk pengumpulan data dan
+              pelaksanaan tugas kerja secara otomatis.
+            </div>
+            <ul class="flex flex-col gap-2 text-[#E0E0E0] text-base">
+              <li class="flex items-center gap-4">
+                <span class="text-[#BAFD02]">✔</span>
+                <span>Intelligent Task Execution</span>
+              </li>
+              <li class="flex items-center gap-4">
+                <span class="text-[#BAFD02]">✔</span>
+                <span>Intelligent Task Execution</span>
+              </li>
+              <li class="flex items-center gap-4">
+                <span class="text-[#BAFD02]">✔</span>
+                <span>Intelligent Task Execution</span>
+              </li>
+            </ul>
+            <div class="w-full flex items-center gap-8">
+              <button
+                class="font-bold py-3 w-full text-black bg-[#BAFD02] rounded-full"
+              >
+                Konsultasi
+              </button>
+              <button
+                class="font-bold py-3 w-full text-[#BAFD02] border border-[#BAFD02] rounded-full"
+              >
+                Daftar
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="flex gap-[60px] w-full md-screen:gap-[40px] md-screen:flex-col">
+          <div class="flex-1">
+            <img
+              src="/assets/fitur.png"
+              class="size-full object-cover md-screen:object-contain"
+            />
+          </div>
+          <div class="flex-1 flex flex-col gap-4">
+            <div
+              class="text-sm font-bold bg-[#BAFD02] px-8 py-3 w-fit rounded-full"
+            >
+              Actions
+            </div>
+            <div class="text-[#E0E0E0] text-2xl font-bold">
+              Menjalankan Tanggung Jawab dan Mengumpulkan Informasi melalui
+              Interaksi
+            </div>
+            <div class="text-[#E0E0E0] text-base font-medium">
+              Kumpulkan data dan otomatisasikan alur kerja. Jadikan antarmuka
+              obrolan Anda alat yang hebat untuk pengumpulan data dan
+              pelaksanaan tugas kerja secara otomatis.
+            </div>
+            <ul class="flex flex-col gap-2 text-[#E0E0E0] text-base">
+              <li class="flex items-center gap-4">
+                <span class="text-[#BAFD02]">✔</span>
+                <span>Intelligent Task Execution</span>
+              </li>
+              <li class="flex items-center gap-4">
+                <span class="text-[#BAFD02]">✔</span>
+                <span>Intelligent Task Execution</span>
+              </li>
+              <li class="flex items-center gap-4">
+                <span class="text-[#BAFD02]">✔</span>
+                <span>Intelligent Task Execution</span>
+              </li>
+            </ul>
+            <div class="w-full flex items-center gap-8">
+              <button
+                class="font-bold py-3 w-full text-black bg-[#BAFD02] rounded-full"
+              >
+                Konsultasi
+              </button>
+              <button
+                class="font-bold py-3 w-full text-[#BAFD02] border border-[#BAFD02] rounded-full"
+              >
+                Daftar
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex flex-row-reverse gap-[60px] w-full md-screen:gap-[40px] md-screen:flex-col"
+        >
+          <div class="flex-1">
+            <img
+              src="/assets/fitur.png"
+              class="size-full object-cover md-screen:object-contain"
+            />
+          </div>
+          <div class="flex-1 flex flex-col gap-4">
+            <div
+              class="text-sm font-bold bg-[#BAFD02] px-8 py-3 w-fit rounded-full"
+            >
+              Actions
+            </div>
+            <div class="text-[#E0E0E0] text-2xl font-bold">
+              Menjalankan Tanggung Jawab dan Mengumpulkan Informasi melalui
+              Interaksi
+            </div>
+            <div class="text-[#E0E0E0] text-base font-medium">
+              Kumpulkan data dan otomatisasikan alur kerja. Jadikan antarmuka
+              obrolan Anda alat yang hebat untuk pengumpulan data dan
+              pelaksanaan tugas kerja secara otomatis.
+            </div>
+            <ul class="flex flex-col gap-2 text-[#E0E0E0] text-base">
+              <li class="flex items-center gap-4">
+                <span class="text-[#BAFD02]">✔</span>
+                <span>Intelligent Task Execution</span>
+              </li>
+              <li class="flex items-center gap-4">
+                <span class="text-[#BAFD02]">✔</span>
+                <span>Intelligent Task Execution</span>
+              </li>
+              <li class="flex items-center gap-4">
+                <span class="text-[#BAFD02]">✔</span>
+                <span>Intelligent Task Execution</span>
+              </li>
+            </ul>
+            <div class="w-full flex items-center gap-8">
+              <button
+                class="font-bold py-3 w-full text-black bg-[#BAFD02] rounded-full"
+              >
+                Konsultasi
+              </button>
+              <button
+                class="font-bold py-3 w-full text-[#BAFD02] border border-[#BAFD02] rounded-full"
+              >
+                Daftar
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="flex gap-[60px] w-full md-screen:gap-[40px] md-screen:flex-col">
+          <div class="flex-1">
+            <img
+              src="/assets/fitur.png"
+              class="size-full object-cover md-screen:object-contain"
+            />
+          </div>
+          <div class="flex-1 flex flex-col gap-4">
+            <div
+              class="text-sm font-bold bg-[#BAFD02] px-8 py-3 w-fit rounded-full"
+            >
+              Actions
+            </div>
+            <div class="text-[#E0E0E0] text-2xl font-bold">
+              Menjalankan Tanggung Jawab dan Mengumpulkan Informasi melalui
+              Interaksi
+            </div>
+            <div class="text-[#E0E0E0] text-base font-medium">
+              Kumpulkan data dan otomatisasikan alur kerja. Jadikan antarmuka
+              obrolan Anda alat yang hebat untuk pengumpulan data dan
+              pelaksanaan tugas kerja secara otomatis.
+            </div>
+            <ul class="flex flex-col gap-2 text-[#E0E0E0] text-base">
+              <li class="flex items-center gap-4">
+                <span class="text-[#BAFD02]">✔</span>
+                <span>Intelligent Task Execution</span>
+              </li>
+              <li class="flex items-center gap-4">
+                <span class="text-[#BAFD02]">✔</span>
+                <span>Intelligent Task Execution</span>
+              </li>
+              <li class="flex items-center gap-4">
+                <span class="text-[#BAFD02]">✔</span>
+                <span>Intelligent Task Execution</span>
+              </li>
+            </ul>
+            <div class="w-full flex items-center gap-8">
+              <button
+                class="font-bold py-3 w-full text-black bg-[#BAFD02] rounded-full"
+              >
+                Konsultasi
+              </button>
+              <button
+                class="font-bold py-3 w-full text-[#BAFD02] border border-[#BAFD02] rounded-full"
+              >
+                Daftar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="w-full flex justify-center">
+      <div
+        class="w-full max-w-[1440px] flex p-[96px] relative gap-10 flex-col before:bg-pattern before:size-full before:absolute before:left-0 before:top-0 before:opacity-20 before:z-[-1] lg-screen:p-7 sm-screen:p-4"
+      >
+        <div class="mx-auto flex justify-center flex-col items-center gap-8">
+          <div class="w-[726px] text-center flex flex-col sm-screen:w-full">
+            <span class="text-neutral-200 text-5xl font-bold lg-screen:text-4xl"
+              >Lorem Ipsum is simply dummy</span
+            ><span class="text-lime-400 text-5xl font-bold lg-screen:text-4xl"
+              >typesetting industry</span
+            >
+          </div>
+          <div
+            class="w-[660px] text-center justify-center text-neutral-200 text-xl font-normal leading-normal lg-screen:text-base sm-screen:w-full"
+          >
+            Lorem Ipsum has been the industry's standard dummy text ever since
+            the 1500s, when an unknown printer took a galley of type and
+            scrambled it to make a type specimen book.
+          </div>
+          <div
+            class="inline-flex justify-center items-center gap-8 sm-screen:flex-col sm-screen:gap-4"
+          >
+            <div
+              class="w-64 h-12 p-3 bg-lime-400 rounded-[20px] inline-flex flex-col justify-start items-start gap-2.5 sm-screen:w-full"
+            >
+              <div class="inline-flex justify-start items-center gap-3">
+                <img class="w-6 h-6" src="https://placehold.co/24x24" />
+                <div
+                  class="text-center justify-center text-black text-base font-bold font-['Plus_Jakarta_Sans'] leading-tight"
+                >
+                  Konsultasi Dengan Kami
+                </div>
+              </div>
+            </div>
+            <div
+              class="w-48 h-12 p-3 rounded-[20px] outline outline-1 outline-offset-[-1px] outline-lime-400 inline-flex flex-col justify-center items-center gap-2.5 sm-screen:w-full"
+            >
+              <div class="inline-flex justify-center items-center gap-3">
+                <div
+                  class="text-center justify-center text-lime-400 text-base font-bold font-['Plus_Jakarta_Sans'] leading-tight"
+                >
+                  Daftar Sekarang
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex gap-8 relative w-full sm-screen:flex-col">
+          <div class="w-[57%] shrink-0 sm-screen:w-full">
+            <div
+              class="size-full bg-[linear-gradient(145deg,_#15141d_85%,_#bafd02_100%)] px-9 py-8 rounded-xl shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] inline-flex flex-col justify-start items-start gap-9 md-screen:p-4"
+            >
+              <img
+                class="w-full h-60 md-screen:object-cover"
+                src="https://placehold.co/628x234"
+              />
+              <div class="flex flex-col justify-start items-start gap-3">
+                <div
+                  class="w-44 h-9 px-4 py-[5px] bg-lime-400/90 rounded-2xl outline outline-1 outline-offset-[-1px] outline-lime-400 inline-flex justify-center items-center gap-2.5"
+                >
+                  <div
+                    class="justify-start text-neutral-900 text-sm font-semibold"
+                  >
+                    Omnichannel + CRM
+                  </div>
+                </div>
+                <div
+                  class="self-stretch justify-start text-neutral-200 text-xl font-bold"
+                >
+                  Chatting Dashboard Lengkap
+                </div>
+                <div
+                  class="self-stretch justify-start text-neutral-200 text-base font-light"
+                >
+                  Pantau semua percakapan, jawaban AI, dan semua chat dari
+                  pelanggan anda dalam 1 dashboard chatting lengkap.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="w-full">
+            <div
+              class="size-full bg-[linear-gradient(145deg,_#15141d_85%,_#bafd02_100%)] px-9 py-8 rounded-xl shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] inline-flex flex-col justify-start items-start gap-9 md-screen:p-4"
+            >
+              <img
+                class="w-80 h-60 md-screen:object-cover"
+                src="https://placehold.co/317x234"
+              />
+              <div class="flex flex-col justify-start items-start gap-3">
+                <div
+                  class="w-44 h-9 px-4 py-[5px] bg-lime-400/90 rounded-2xl outline outline-1 outline-offset-[-1px] outline-lime-400 inline-flex justify-center items-center gap-2.5"
+                >
+                  <div
+                    class="justify-start text-neutral-900 text-sm font-semibold"
+                  >
+                    Creative
+                  </div>
+                </div>
+                <div
+                  class="self-stretch justify-start text-neutral-200 text-xl font-bold"
+                >
+                  Ticketing dan Order Management
+                </div>
+                <div
+                  class="self-stretch justify-start text-neutral-200 text-base font-light"
+                >
+                  Kelola pesanan, booking atau sales pipeline anda dengan mudah.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="grid grid-cols-3 gap-4 relative w-full sm-screen:grid-cols-1"
+        >
+          <div
+            class="size-full px-9 py-8 bg-[linear-gradient(160deg,_#15141D_83%,_#BAFD02_99.63%)] rounded-xl shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] inline-flex flex-col justify-start items-start gap-9 md-screen:p-4"
+          >
+            <img
+              class="w-full h-60 md-screen:object-cover"
+              src="https://placehold.co/317x234"
+            />
+            <div class="w-full flex flex-col justify-start items-start gap-3">
+              <div
+                class="w-24 h-9 px-4 py-[5px] bg-lime-400/90 rounded-2xl outline outline-1 outline-offset-[-1px] outline-lime-400 inline-flex justify-center items-center gap-2.5"
+              >
+                <div
+                  class="justify-start text-neutral-900 text-sm font-semibold"
+                >
+                  Campaign
+                </div>
+              </div>
+              <div
+                class="self-stretch justify-start text-neutral-200 text-xl font-bold"
+              >
+                Broadcast dan AI Followups
+              </div>
+              <div
+                class="w-full justify-start text-neutral-200 text-base font-light"
+              >
+                Jangan takut lagi broadcast ke 100k pelanggan. AI siap menjawab
+                semua pertanyaan campaign anda dan Followups leads yang hilang.
+              </div>
+            </div>
+          </div>
+          <div
+            class="size-full px-9 py-8 bg-[linear-gradient(160deg,_#15141D_83%,_#BAFD02_99.63%)] rounded-xl shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] inline-flex flex-col justify-start items-start gap-9 md-screen:p-4"
+          >
+            <img
+              class="w-full h-60 md-screen:object-cover"
+              src="https://placehold.co/317x234"
+            />
+            <div class="w-full flex flex-col justify-start items-start gap-3">
+              <div
+                class="w-24 h-9 px-4 py-[5px] bg-lime-400/90 rounded-2xl outline outline-1 outline-offset-[-1px] outline-lime-400 inline-flex justify-center items-center gap-2.5"
+              >
+                <div
+                  class="justify-start text-neutral-900 text-sm font-semibold"
+                >
+                  Campaign
+                </div>
+              </div>
+              <div
+                class="self-stretch justify-start text-neutral-200 text-xl font-bold"
+              >
+                Broadcast dan AI Followups
+              </div>
+              <div
+                class="w-full justify-start text-neutral-200 text-base font-light"
+              >
+                Jangan takut lagi broadcast ke 100k pelanggan. AI siap menjawab
+                semua pertanyaan campaign anda dan Followups leads yang hilang.
+              </div>
+            </div>
+          </div>
+          <div
+            class="size-full px-9 py-8 bg-[linear-gradient(160deg,_#15141D_83%,_#BAFD02_99.63%)] rounded-xl shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] inline-flex flex-col justify-start items-start gap-9 md-screen:p-4"
+          >
+            <img
+              class="w-full h-60 md-screen:object-cover"
+              src="https://placehold.co/317x234"
+            />
+            <div class="w-full flex flex-col justify-start items-start gap-3">
+              <div
+                class="w-24 h-9 px-4 py-[5px] bg-lime-400/90 rounded-2xl outline outline-1 outline-offset-[-1px] outline-lime-400 inline-flex justify-center items-center gap-2.5"
+              >
+                <div
+                  class="justify-start text-neutral-900 text-sm font-semibold"
+                >
+                  Campaign
+                </div>
+              </div>
+              <div
+                class="self-stretch justify-start text-neutral-200 text-xl font-bold"
+              >
+                Broadcast dan AI Followups
+              </div>
+              <div
+                class="w-full justify-start text-neutral-200 text-base font-light"
+              >
+                Jangan takut lagi broadcast ke 100k pelanggan. AI siap menjawab
+                semua pertanyaan campaign anda dan Followups leads yang hilang.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="flex w-full max-w-[1440px] justify-center p-[96px] relative bg-[#121212] lg-screen:p-7 sm-screen:p-4"
+    >
+      <div class="absolute size-full left-0 top-0 flex z-[1] opacity-10">
+        <img src="./assets/pattern.png" alt="" class="size-full" />
+      </div>
+      <div class="size-full absolute left-0 top-0 flex z-[2]">
+        <img src="./assets/ellipse-green.svg" alt="" class="size-full" />
+      </div>
+      <div class="flex flex-col gap-[80px] w-full relative z-[3] sm-screen:gap-12">
+        <div class="flex flex-col items-center mx-auto w-[70%] gap-[40px] md-screen:w-full">
+          <div class="text-6xl font-bold text-[#E0E0E0] text-center md-screen:text-5xl sm-screen:text-4xl">
+            <span class="text-[#BAFD02]">Semua Fitur CRM </span>dalam Satu
+            Aplikasi
+          </div>
+          <div class="w-[70%] flex items-center gap-8 sm-screen:w-full sm-screen:flex-col sm-screen:gap-4">
+            <button
+              class="font-bold py-3 w-full text-black bg-[#BAFD02] rounded-full whitespace-nowrap"
+            >
+              Konsultasi Dengan Kami
+            </button>
+            <button
+              class="font-bold py-3 w-full text-[#BAFD02] border border-[#BAFD02] rounded-full"
+            >
+              Daftar Sekarang
+            </button>
+          </div>
+        </div>
+        <div class="grid grid-cols-3 gap-5 sm-screen:grid-cols-1">
+          <div class="flex w-full relative px-[18px] pb-[18px] h-full">
+            <div
+              class="relative z-[2] flex p-6 flex-col gap-4 bg-[#15141D] rounded-[10px] border border-[#282D45] lg-screen:p-4 lg-screen:gap-4"
+            >
+              <div><img src="./assets/radar.svg" alt="" /></div>
+              <div class="text-2xl font-bold text-[#E0E0E0]">Broadcast</div>
+              <div class="text-[#E0E0E0] lg-screen:text-sm">
+                kirim pesan ke banyak contact di database mu dengan cepat dan
+                mudah
+              </div>
+            </div>
+            <div class="absolute bottom-0 left-0 w-full h-1/2 flex">
+              <img
+                class="size-full object-cover border rounded-xl border-[#475939] overflow-hidden bg-[#15141D]"
+                src="./assets/shape-3.svg"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="flex w-full relative px-[18px] pb-[18px] h-full">
+            <div
+              class="relative z-[2] flex p-6 flex-col gap-4 bg-[#15141D] rounded-[10px] border border-[#282D45] lg-screen:p-4 lg-screen:gap-4"
+            >
+              <div><img src="./assets/radar.svg" alt="" /></div>
+              <div class="text-2xl font-bold text-[#E0E0E0]">Broadcast</div>
+              <div class="text-[#E0E0E0] lg-screen:text-sm">
+                kirim pesan ke banyak contact di database mu dengan cepat dan
+                mudah
+              </div>
+            </div>
+            <div class="absolute bottom-0 left-0 w-full h-1/2 flex">
+              <img
+                class="size-full object-cover border rounded-xl border-[#475939] overflow-hidden bg-[#15141D]"
+                src="./assets/shape-3.svg"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="flex w-full relative px-[18px] pb-[18px] h-full">
+            <div
+              class="relative z-[2] flex p-6 flex-col gap-4 bg-[#15141D] rounded-[10px] border border-[#282D45] lg-screen:p-4 lg-screen:gap-4"
+            >
+              <div><img src="./assets/radar.svg" alt="" /></div>
+              <div class="text-2xl font-bold text-[#E0E0E0]">Broadcast</div>
+              <div class="text-[#E0E0E0] lg-screen:text-sm">
+                kirim pesan ke banyak contact di database mu dengan cepat dan
+                mudah
+              </div>
+            </div>
+            <div class="absolute bottom-0 left-0 w-full h-1/2 flex">
+              <img
+                class="size-full object-cover border rounded-xl border-[#475939] overflow-hidden bg-[#15141D]"
+                src="./assets/shape-3.svg"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="flex w-full relative px-[18px] pb-[18px] h-full">
+            <div
+              class="relative z-[2] flex p-6 flex-col gap-4 bg-[#15141D] rounded-[10px] border border-[#282D45] lg-screen:p-4 lg-screen:gap-4"
+            >
+              <div><img src="./assets/radar.svg" alt="" /></div>
+              <div class="text-2xl font-bold text-[#E0E0E0]">Broadcast</div>
+              <div class="text-[#E0E0E0] lg-screen:text-sm">
+                kirim pesan ke banyak contact di database mu dengan cepat dan
+                mudah
+              </div>
+            </div>
+            <div class="absolute bottom-0 left-0 w-full h-1/2 flex">
+              <img
+                class="size-full object-cover border rounded-xl border-[#475939] overflow-hidden bg-[#15141D]"
+                src="./assets/shape-3.svg"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="flex w-full relative px-[18px] pb-[18px] h-full">
+            <div
+              class="relative z-[2] flex p-6 flex-col gap-4 bg-[#15141D] rounded-[10px] border border-[#282D45] lg-screen:p-4 lg-screen:gap-4"
+            >
+              <div><img src="./assets/radar.svg" alt="" /></div>
+              <div class="text-2xl font-bold text-[#E0E0E0]">Broadcast</div>
+              <div class="text-[#E0E0E0] lg-screen:text-sm">
+                kirim pesan ke banyak contact di database mu dengan cepat dan
+                mudah
+              </div>
+            </div>
+            <div class="absolute bottom-0 left-0 w-full h-1/2 flex">
+              <img
+                class="size-full object-cover border rounded-xl border-[#475939] overflow-hidden bg-[#15141D]"
+                src="./assets/shape-3.svg"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="flex w-full relative px-[18px] pb-[18px] h-full">
+            <div
+              class="relative z-[2] flex p-6 flex-col gap-4 bg-[#15141D] rounded-[10px] border border-[#282D45] lg-screen:p-4 lg-screen:gap-4"
+            >
+              <div><img src="./assets/radar.svg" alt="" /></div>
+              <div class="text-2xl font-bold text-[#E0E0E0]">Broadcast</div>
+              <div class="text-[#E0E0E0] lg-screen:text-sm">
+                kirim pesan ke banyak contact di database mu dengan cepat dan
+                mudah
+              </div>
+            </div>
+            <div class="absolute bottom-0 left-0 w-full h-1/2 flex">
+              <img
+                class="size-full object-cover border rounded-xl border-[#475939] overflow-hidden bg-[#15141D]"
+                src="./assets/shape-3.svg"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="w-full flex justify-center">
+      <div
+        class="w-full max-w-[1440px] flex justify-center p-[96px] lg-screen:p-7 sm-screen:p-4"
+      >
+        <div
+          class="w-full grid grid-cols-5 sm-screen:grid-cols-2 sm-screen:gap-12"
+        >
+          <div class="size-full flex flex-col gap-6 sm-screen:col-span-2">
+            <div>
+              <img src="./assets/logoipsum.svg" alt="" />
+            </div>
+            <div class="text-[#E0E0E0] text-sm opacity-65">
+              Lorem ipsum dolor sit amet consectetur. Ac quam sem mi nibh
+              volutpat enim pellentesque. Proin iaculis nisl et neque sed
+              fermentum sollicitudin lectus.
+            </div>
+            <div class="flex gap-2">
+              <div class="size-[24px]">
+                <img src="./assets/twitter.svg" alt="" />
+              </div>
+              <div class="size-[24px]">
+                <img src="./assets/twitter.svg" alt="" />
+              </div>
+              <div class="size-[24px]">
+                <img src="./assets/twitter.svg" alt="" />
+              </div>
+              <div class="size-[24px]">
+                <img src="./assets/twitter.svg" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="flex justify-center sm-screen:justify-start">
+            <div class="w-fit flex flex-col gap-5 lg-screen:text-sm">
+              <div class="text-white/65 font-bold">Company</div>
+              <div class="text-[#E0E0E0] cursor-pointer">About Us</div>
+              <div class="text-[#E0E0E0] cursor-pointer">Contact Us</div>
+              <div class="text-[#E0E0E0] cursor-pointer">Careers</div>
+              <div class="text-[#E0E0E0] cursor-pointer">Press</div>
+            </div>
+          </div>
+          <div class="flex justify-center sm-screen:justify-start">
+            <div class="w-fit flex flex-col gap-5 lg-screen:text-sm">
+              <div class="text-white/65 font-bold">Product</div>
+              <div class="text-[#E0E0E0] cursor-pointer">Features</div>
+              <div class="text-[#E0E0E0] cursor-pointer">Contact Us</div>
+              <div class="text-[#E0E0E0] cursor-pointer">Pricing</div>
+              <div class="text-[#E0E0E0] cursor-pointer">News</div>
+            </div>
+          </div>
+          <div class="flex justify-center sm-screen:justify-start">
+            <div class="w-fit flex flex-col gap-5 lg-screen:text-sm">
+              <div class="text-white/65 font-bold">Services</div>
+              <div class="text-[#E0E0E0] cursor-pointer">Digital Marketing</div>
+              <div class="text-[#E0E0E0] cursor-pointer">Content Writing</div>
+              <div class="text-[#E0E0E0] cursor-pointer">SEO for Business</div>
+              <div class="text-[#E0E0E0] cursor-pointer">UI Design</div>
+            </div>
+          </div>
+          <div class="flex justify-center sm-screen:justify-start">
+            <div class="w-fit flex flex-col gap-5 lg-screen:text-sm">
+              <div class="text-white/65 font-bold">Legal</div>
+              <div class="text-[#E0E0E0] cursor-pointer">Privacy Policy</div>
+              <div class="text-[#E0E0E0] cursor-pointer">
+                Terms & Conditions
+              </div>
+              <div class="text-[#E0E0E0] cursor-pointer">Return Policy</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./js/global.js"></script>
+  </body>
+</html>
